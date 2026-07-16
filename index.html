@@ -3,30 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FRC Agent Farm | Your AI-Powered Robotics Team</title>
-  <meta name="description" content="FRC Agent Farm is an AI-powered platform for FRC and FTC teams with Commander and 17 specialist AI agents for build season." />
+  <title>PitCrew | Mentor-Assist Build-Season Command Center</title>
+  <meta name="description" content="PitCrew is a mentor-assist build-season command center for small and rebuilding FRC and FTC teams. Turn kickoff decisions into organized plans, tasks, checklists, documentation, and downloadable team resources." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#0a0a0f;--surface:#12121a;--surface-2:#1a1a2e;--blue:#2563eb;--blue-2:#38bdf8;--amber:#f59e0b;--green:#10b981;--text:#f1f5f9;--muted:#94a3b8;--border:#1e293b;--shadow:0 22px 70px rgba(37,99,235,.18);--radius:24px;--max:1180px;}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden} a{color:inherit;text-decoration:none} button{font:inherit} .page{position:relative;background:radial-gradient(circle at 20% 10%,rgba(37,99,235,.24),transparent 32rem),radial-gradient(circle at 80% 15%,rgba(245,158,11,.12),transparent 26rem),linear-gradient(180deg,#0a0a0f,#0a0a0f 60%,#08080d)} .grid-bg{position:fixed;inset:0;pointer-events:none;opacity:.26;background-image:linear-gradient(rgba(148,163,184,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.07) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,#000,transparent 78%);z-index:0} header,section,footer{position:relative;z-index:1}.container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}.nav{position:sticky;top:0;z-index:50;border-bottom:1px solid transparent;transition:.25s;background:rgba(10,10,15,.58);backdrop-filter:blur(14px)}.nav.scrolled{border-color:rgba(30,41,59,.85);background:rgba(10,10,15,.86);box-shadow:0 8px 34px rgba(0,0,0,.32)}.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk";font-weight:700;font-size:1.15rem}.bolt{display:grid;place-items:center;width:36px;height:36px;border-radius:999px;background:linear-gradient(135deg,rgba(37,99,235,.35),rgba(245,158,11,.18));border:1px solid rgba(37,99,235,.36);box-shadow:0 0 30px rgba(37,99,235,.22)}.nav-links{display:flex;align-items:center;gap:26px;color:var(--muted);font-size:.95rem;font-weight:600}.nav-links a:hover{color:var(--text)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:12px 19px;border:1px solid rgba(148,163,184,.22);background:rgba(18,18,26,.72);color:var(--text);font-weight:800;cursor:pointer;transition:.22s;white-space:nowrap}.btn:hover{transform:translateY(-2px);border-color:rgba(56,189,248,.46);box-shadow:var(--shadow)}.btn-primary{border-color:rgba(37,99,235,.9);background:linear-gradient(135deg,var(--blue),#1d4ed8 55%,#0ea5e9);box-shadow:0 12px 40px rgba(37,99,235,.3)}.btn-large{padding:15px 24px;font-size:1.02rem}.menu-btn{display:none;background:transparent;color:var(--text);border:1px solid var(--border);border-radius:12px;padding:8px 10px}.hero{padding:90px 0 40px}.hero-layout{display:grid;grid-template-columns:1.02fr .98fr;gap:50px;align-items:center}.eyebrow,.label{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(37,99,235,.28);background:rgba(37,99,235,.1);border-radius:999px;padding:8px 12px;color:#bfdbfe;font-family:"JetBrains Mono";font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.hero h1{font-family:"Space Grotesk";font-size:clamp(3rem,7vw,5.9rem);line-height:.92;letter-spacing:-.06em;margin:24px 0 22px}.gradient-text{background:linear-gradient(90deg,#93c5fd,#38bdf8,#2563eb);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:1.15rem;color:#cbd5e1;max-width:670px}.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}.stats{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px}.stat{min-width:126px;padding:14px 16px;border:1px solid var(--border);border-radius:18px;background:rgba(18,18,26,.62)}.stat strong{display:block;font-family:"Space Grotesk";font-size:1.8rem;line-height:1}.stat span{color:var(--muted);font-size:.84rem}.mockup{position:relative;border:1px solid rgba(37,99,235,.36);border-radius:28px;background:linear-gradient(180deg,rgba(26,26,46,.96),rgba(18,18,26,.92));box-shadow:0 0 0 1px rgba(56,189,248,.08),0 30px 100px rgba(37,99,235,.24);overflow:hidden}.mockup:before{content:"";position:absolute;inset:-1px;background:radial-gradient(circle at 70% 0%,rgba(56,189,248,.35),transparent 20rem);pointer-events:none}.mock-head{display:flex;align-items:center;justify-content:space-between;padding:18px 18px;border-bottom:1px solid var(--border);position:relative}.lights{display:flex;gap:8px}.dot{width:11px;height:11px;border-radius:50%;background:#64748b}.dot:nth-child(1){background:#ef4444}.dot:nth-child(2){background:#f59e0b}.dot:nth-child(3){background:#10b981}.mono{font-family:"JetBrains Mono"}.mock-body{position:relative;padding:22px}.chat{border:1px solid rgba(30,41,59,.9);border-radius:20px;background:rgba(10,10,15,.66);padding:18px;margin-bottom:18px}.user-line{color:#e2e8f0;font-weight:700}.commander-line{margin-top:14px;color:var(--muted)}.agent-status{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.agent-mini{padding:13px;border:1px solid var(--border);border-radius:16px;background:rgba(18,18,26,.82);display:flex;align-items:center;justify-content:space-between;gap:8px}.badge{font-family:"JetBrains Mono";font-size:.7rem;border-radius:999px;padding:4px 8px;border:1px solid}.done{color:#86efac;background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.35)}.active{color:#fdba74;background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.4);animation:pulse 1.6s infinite}.idle{color:#93c5fd;background:rgba(37,99,235,.1);border-color:rgba(37,99,235,.34)}@keyframes pulse{50%{box-shadow:0 0 18px rgba(245,158,11,.24)}}.marquee-wrap{margin-top:42px;overflow:hidden;border-block:1px solid rgba(30,41,59,.75);padding:14px 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}.marquee{display:flex;gap:12px;width:max-content;animation:scroll 30s linear infinite}.pill{border:1px solid rgba(148,163,184,.18);background:rgba(18,18,26,.72);border-radius:999px;padding:8px 13px;color:#dbeafe;font-family:"JetBrains Mono";font-size:.83rem}@keyframes scroll{to{transform:translateX(-50%)}}section{padding:96px 0;border-top:1px solid rgba(30,41,59,.54)}.section-head{max-width:760px;margin-bottom:38px}.section-head.center{text-align:center;margin-inline:auto}.section-head h2{font-family:"Space Grotesk";font-size:clamp(2.3rem,4vw,3.55rem);line-height:1.03;letter-spacing:-.045em;margin:16px 0}.section-head p{color:#cbd5e1;font-size:1.05rem}.split{display:grid;grid-template-columns:.86fr 1.14fr;gap:34px;align-items:start}.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--border);border-radius:var(--radius);background:linear-gradient(180deg,rgba(26,26,46,.72),rgba(18,18,26,.78));padding:24px;box-shadow:0 1px 0 rgba(255,255,255,.03) inset;transition:.22s}.card:hover{transform:translateY(-4px);border-color:rgba(56,189,248,.42);box-shadow:0 24px 70px rgba(37,99,235,.15)}.icon{font-size:1.75rem}.card h3{font-size:1.12rem;margin:12px 0 8px}.card p{color:var(--muted);margin:0}.pipeline{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:26px 0 0}.pipe-node{border:1px solid rgba(37,99,235,.34);border-radius:16px;background:rgba(37,99,235,.1);padding:14px 16px;font-family:"JetBrains Mono";font-size:.86rem}.arrow{color:var(--amber);font-size:1.45rem}.features{grid-template-columns:repeat(4,1fr)}.feature-card{min-height:230px}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:phase}.phase{position:relative;padding:28px}.phase:before{counter-increment:phase;content:"0" counter(phase);position:absolute;right:22px;top:16px;font-family:"Space Grotesk";font-size:3rem;color:rgba(37,99,235,.22);font-weight:800}.quote{margin:12px 0 18px;color:#cbd5e1;font-style:italic;border-left:3px solid rgba(245,158,11,.75);padding-left:18px}.phase ul{padding-left:20px;color:var(--muted)}.phase li{margin:10px 0}.agents{grid-template-columns:repeat(4,1fr)}.agent-card{position:relative;overflow:hidden}.agent-card:after{content:"Copy";position:absolute;right:14px;top:14px;font-family:"JetBrains Mono";font-size:.66rem;color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:3px 7px;opacity:0;transition:.2s}.agent-card:hover:after{opacity:1}.agent-role{color:#93c5fd;font-weight:800;font-size:.88rem;margin-bottom:10px}.agent-constraint{font-size:.9rem;color:var(--muted)}.teams{grid-template-columns:repeat(3,1fr)}.team-tag{font-family:"JetBrains Mono";color:#fde68a;font-size:.84rem}.testimonial{max-width:900px;margin-inline:auto;text-align:center}.testimonial-card{font-size:1.2rem;padding:34px;border-color:rgba(245,158,11,.26);background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(37,99,235,.1),rgba(18,18,26,.82))}.trust{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:26px}.trust span{border:1px solid var(--border);border-radius:999px;padding:9px 14px;color:#cbd5e1;background:rgba(18,18,26,.72)}footer{border-top:1px solid var(--border);padding:42px 0 24px;background:rgba(8,8,13,.8)}.footer-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:26px;align-items:center}.footer-links{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);justify-content:center}.footer-right{text-align:right;color:var(--muted)}.bottom{margin-top:26px;padding-top:22px;border-top:1px solid rgba(30,41,59,.72);color:#64748b;font-size:.9rem;text-align:center}.fade-up{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.fade-up.in-view{opacity:1;transform:none}.video-shell{max-width:980px;margin:0 auto;border:1px solid rgba(56,189,248,.28);border-radius:30px;background:linear-gradient(180deg,rgba(26,26,46,.72),rgba(10,10,15,.86));box-shadow:0 32px 90px rgba(37,99,235,.18);overflow:hidden}.video-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;border-bottom:1px solid rgba(30,41,59,.8);color:var(--muted);font-family:"JetBrains Mono";font-size:.78rem}.video-embed{position:relative;padding:18px}.video-embed wistia-player{width:100%;border-radius:20px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.34)}.video-note{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:0 18px 20px;color:var(--muted)}.video-note p{margin:0;max-width:620px}
-@media (max-width:980px){.hero-layout,.split{grid-template-columns:1fr}.features,.agents{grid-template-columns:repeat(2,1fr)}.timeline,.teams,.card-grid{grid-template-columns:1fr 1fr}.nav-links{position:absolute;left:20px;right:20px;top:76px;display:none;flex-direction:column;align-items:stretch;background:rgba(10,10,15,.96);border:1px solid var(--border);border-radius:18px;padding:18px}.nav-links.open{display:flex}.menu-btn{display:block}.nav-cta{display:none}}@media (max-width:640px){.container{width:min(100% - 28px,var(--max))}.hero{padding-top:54px}.agent-status,.features,.agents,.timeline,.teams,.card-grid{grid-template-columns:1fr}.cta-row{display:grid}.btn{width:100%}.stats{display:grid;grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr;text-align:center}.footer-right{text-align:center}.mock-body{padding:15px}section{padding:72px 0}}
-  </style>
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <script src="https://fast.wistia.com/player.js" async></script>
   <script src="https://fast.wistia.com/embed/589h0kdsr9.js" async type="module"></script>
   <style>
-    wistia-player[media-id='589h0kdsr9']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/589h0kdsr9/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }
+    :root{
+      --navy:#0b1220;--navy-2:#08101f;--surface:#101b31;--surface-2:#13233e;--blue:#2563ff;--blue-2:#2f80ed;--yellow:#ffd11a;--white:#ffffff;--graphite:#2e343b;--text:#f8fbff;--muted:#b7c4d8;--border:#263a5e;--soft:#eaf2ff;--shadow:0 28px 90px rgba(37,99,255,.22);--radius:24px;--max:1180px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--navy);color:var(--text);line-height:1.6;overflow-x:hidden} a{color:inherit;text-decoration:none} img{max-width:100%;display:block} button{font:inherit}.page{position:relative;min-height:100vh;background:radial-gradient(circle at 18% 8%,rgba(37,99,255,.28),transparent 30rem),radial-gradient(circle at 85% 8%,rgba(255,209,26,.13),transparent 26rem),linear-gradient(180deg,#081220,#0b1220 58%,#070d18)}.grid-bg{position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,#000,transparent 75%)} header,section,footer{position:relative;z-index:1}.container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}.nav{position:sticky;top:0;z-index:50;background:rgba(8,16,31,.72);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:.25s}.nav.scrolled{border-color:rgba(38,58,94,.9);background:rgba(8,16,31,.94);box-shadow:0 10px 34px rgba(0,0,0,.35)}.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:1.25rem}.mark{width:42px;height:42px;border-radius:13px;border:2px solid rgba(255,255,255,.82);display:grid;place-items:center;position:relative;background:linear-gradient(145deg,rgba(37,99,255,.32),rgba(8,16,31,.9));box-shadow:0 0 28px rgba(37,99,255,.23)}.mark:before{content:"🔧";font-size:20px;transform:rotate(-38deg);filter:saturate(1.3)}.mark:after{content:"";position:absolute;right:-3px;bottom:-3px;width:12px;height:12px;border-radius:4px;background:var(--yellow);border:2px solid var(--navy)}.wordmark{font-family:Orbitron,Inter,sans-serif;letter-spacing:.01em}.wordmark span{color:var(--blue)}.nav-links{display:flex;align-items:center;gap:26px;color:var(--muted);font-size:.94rem;font-weight:700}.nav-links a:hover{color:#fff}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:12px 18px;border:1px solid rgba(255,255,255,.18);background:rgba(16,27,49,.72);font-weight:900;cursor:pointer;transition:.2s;white-space:nowrap}.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:rgba(37,99,255,.7)}.btn-primary{background:linear-gradient(135deg,var(--blue),#0b7cff);border-color:rgba(37,99,255,.95);box-shadow:0 12px 44px rgba(37,99,255,.3)}.btn-yellow{background:linear-gradient(135deg,var(--yellow),#ffb701);color:#081220;border-color:rgba(255,209,26,.9)}.btn-large{padding:15px 24px;font-size:1.02rem}.menu-btn{display:none;background:transparent;color:var(--text);border:1px solid var(--border);border-radius:12px;padding:8px 10px}.hero{padding:92px 0 44px}.hero-layout{display:grid;grid-template-columns:1fr .98fr;gap:48px;align-items:center}.eyebrow,.label{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(37,99,255,.35);background:rgba(37,99,255,.12);border-radius:999px;padding:8px 12px;color:#dbeafe;font-family:"JetBrains Mono";font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.hero h1{font-family:Orbitron,Inter,sans-serif;font-size:clamp(2.75rem,6.6vw,5.25rem);line-height:1;letter-spacing:-.05em;margin:24px 0 20px}.blue{color:var(--blue)}.yellow{color:var(--yellow)}.lead{font-size:1.14rem;color:#d5deec;max-width:675px}.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}.mini-proof{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;color:#d5deec;font-size:.9rem}.mini-proof span{display:inline-flex;align-items:center;gap:7px}.hero-panel{border:1px solid rgba(37,99,255,.36);border-radius:30px;background:linear-gradient(180deg,rgba(19,35,62,.93),rgba(8,16,31,.86));box-shadow:var(--shadow);overflow:hidden;position:relative}.hero-panel:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 18%,rgba(37,99,255,.34),transparent 21rem);pointer-events:none}.panel-top{position:relative;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(38,58,94,.9);padding:16px 18px}.panel-body{position:relative;padding:22px}.robot-card{position:relative;border:1px solid rgba(37,99,255,.38);border-radius:22px;background:linear-gradient(135deg,rgba(4,11,22,.72),rgba(14,34,66,.86));padding:22px;min-height:250px;overflow:hidden}.robot-card:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:26px 26px;opacity:.7}.robot-illo{position:relative;height:170px;display:flex;align-items:end;justify-content:center}.bot-base{width:280px;height:62px;border:2px solid rgba(37,99,255,.85);border-radius:16px;background:linear-gradient(180deg,rgba(37,99,255,.55),rgba(16,27,49,.9));box-shadow:0 0 40px rgba(37,99,255,.2);position:relative}.bot-base:after{content:"1557";position:absolute;left:30px;top:10px;font-family:Orbitron;font-size:29px;font-weight:800;color:white;text-shadow:0 2px 10px rgba(0,0,0,.4)}.arm{position:absolute;bottom:46px;width:18px;height:128px;border:2px solid rgba(85,145,255,.95);border-radius:10px;transform-origin:bottom;background:rgba(37,99,255,.12)}.arm.one{transform:rotate(-16deg);left:44%}.arm.two{transform:rotate(18deg);left:56%;height:140px}.arm:before{content:"";position:absolute;left:50%;top:-14px;transform:translateX(-50%);width:30px;height:30px;border-radius:50%;border:2px solid rgba(85,145,255,.95);background:rgba(8,16,31,.9)}.dashboard-row{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.dash-card{border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.07);padding:16px}.dash-card strong{font-family:Orbitron;font-size:1.55rem}.dash-card span{display:block;color:var(--muted);font-size:.82rem}.domain-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,209,26,.8);color:var(--yellow);border-radius:999px;padding:8px 12px;font-weight:900}.marquee-wrap{margin-top:42px;overflow:hidden;border-block:1px solid rgba(38,58,94,.75);padding:14px 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}.marquee{display:flex;gap:12px;width:max-content;animation:scroll 32s linear infinite}.pill{border:1px solid rgba(255,255,255,.16);background:rgba(16,27,49,.7);border-radius:999px;padding:8px 13px;color:#dbeafe;font-family:"JetBrains Mono";font-size:.82rem}@keyframes scroll{to{transform:translateX(-50%)}}section{padding:92px 0;border-top:1px solid rgba(38,58,94,.62)}.section-head{max-width:760px;margin-bottom:38px}.section-head.center{text-align:center;margin-inline:auto}.section-head h2{font-family:Orbitron,Inter,sans-serif;font-size:clamp(2.1rem,3.8vw,3.35rem);line-height:1.08;letter-spacing:-.035em;margin:16px 0}.section-head p{color:#d5deec;font-size:1.05rem}.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--border);border-radius:var(--radius);background:linear-gradient(180deg,rgba(19,35,62,.75),rgba(16,27,49,.72));padding:24px;box-shadow:0 1px 0 rgba(255,255,255,.04) inset;transition:.22s}.card:hover{transform:translateY(-4px);border-color:rgba(37,99,255,.6);box-shadow:0 24px 70px rgba(37,99,255,.16)}.icon{font-size:1.75rem}.card h3{font-size:1.12rem;margin:12px 0 8px}.card p{color:var(--muted);margin:0}.light-section{background:linear-gradient(180deg,#eef5ff,#fff);color:#0b1220}.light-section .section-head p,.light-section .card p{color:#4b5c76}.light-section .card{background:#fff;border-color:#d7e4fa;color:#0b1220}.workflow{grid-template-columns:repeat(4,1fr)}.phase{position:relative}.phase:before{content:attr(data-step);position:absolute;right:20px;top:14px;font-family:Orbitron;font-size:2.8rem;color:rgba(37,99,255,.16);font-weight:900}.teams{grid-template-columns:repeat(3,1fr)}.brand-board{border:1px solid var(--border);border-radius:30px;overflow:hidden;box-shadow:var(--shadow);background:#071120}.brand-board img{width:100%;height:auto}.video-shell{max-width:980px;margin:0 auto;border:1px solid rgba(37,99,255,.34);border-radius:30px;background:linear-gradient(180deg,rgba(19,35,62,.8),rgba(8,16,31,.9));box-shadow:var(--shadow);overflow:hidden}.video-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 20px;border-bottom:1px solid rgba(38,58,94,.85);color:var(--muted);font-family:"JetBrains Mono";font-size:.78rem}.video-embed{padding:18px}.video-embed wistia-player{width:100%;border-radius:20px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.34)}wistia-player[media-id='589h0kdsr9']:not(:defined){background:center / contain no-repeat url('https://fast.wistia.com/embed/medias/589h0kdsr9/swatch');display:block;filter:blur(5px);padding-top:56.25%}.resource-grid{display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:18px;align-items:stretch}.resource-card{position:relative;overflow:hidden}.resource-card.featured{background:linear-gradient(135deg,rgba(37,99,255,.22),rgba(255,209,26,.11)),linear-gradient(180deg,rgba(19,35,62,.85),rgba(16,27,49,.78));border-color:rgba(255,209,26,.45)}.resource-kicker{display:inline-flex;align-items:center;gap:7px;font-family:"JetBrains Mono";font-size:.72rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#dbeafe;background:rgba(37,99,255,.13);border:1px solid rgba(37,99,255,.3);border-radius:999px;padding:6px 10px}.file-meta{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}.file-meta span{font-family:"JetBrains Mono";font-size:.74rem;color:#dbeafe;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:5px 8px;background:rgba(255,255,255,.06)}.resource-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}.resource-card .btn{padding:10px 14px;font-size:.9rem}.resource-note{margin-top:20px;color:var(--muted);font-size:.92rem;text-align:center}.resource-card:after{content:"PDF";position:absolute;right:18px;top:18px;font-family:Orbitron;font-size:.78rem;font-weight:900;color:rgba(255,209,26,.85);border:1px solid rgba(255,209,26,.35);border-radius:999px;padding:4px 8px}.cta{padding:90px 0;text-align:center;background:radial-gradient(circle at 50% 0,rgba(37,99,255,.22),transparent 28rem)}.cta h2{font-family:Orbitron;font-size:clamp(2.3rem,4vw,3.7rem);line-height:1.06;margin:0 0 16px}.trust{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:26px}.trust span{border:1px solid var(--border);border-radius:999px;padding:9px 14px;color:#d5deec;background:rgba(16,27,49,.72)}footer{border-top:1px solid var(--border);padding:42px 0 24px;background:rgba(7,13,24,.86)}.footer-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:26px;align-items:center}.footer-links{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);justify-content:center}.footer-right{text-align:right;color:var(--muted)}.bottom{margin-top:26px;padding-top:22px;border-top:1px solid rgba(38,58,94,.72);color:#7f8ca3;font-size:.9rem;text-align:center}.fade-up{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.fade-up.in-view{opacity:1;transform:none}
+    @media (max-width:980px){.hero-layout,.split,.resource-grid{grid-template-columns:1fr}.workflow{grid-template-columns:repeat(2,1fr)}.card-grid,.teams{grid-template-columns:1fr 1fr}.nav-links{position:absolute;left:20px;right:20px;top:78px;display:none;flex-direction:column;align-items:stretch;background:rgba(8,16,31,.97);border:1px solid var(--border);border-radius:18px;padding:18px}.nav-links.open{display:flex}.menu-btn{display:block}.nav-cta{display:none}}@media (max-width:640px){.container{width:min(100% - 28px,var(--max))}.hero{padding-top:56px}.workflow,.card-grid,.teams,.dashboard-row{grid-template-columns:1fr}.cta-row{display:grid}.btn{width:100%}.footer-grid{grid-template-columns:1fr;text-align:center}.footer-right{text-align:center}section{padding:70px 0}.hero h1{font-size:2.7rem}.bot-base{width:240px}.brand{font-size:1.06rem}.mark{width:38px;height:38px}}
+
+    .playbook-card{position:relative;border:1px solid rgba(37,99,255,.38);border-radius:22px;background:linear-gradient(135deg,rgba(4,11,22,.72),rgba(14,34,66,.86));padding:22px;min-height:250px;overflow:hidden}
+    .playbook-card:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:26px 26px;opacity:.7}
+    .playbook-card>*{position:relative}.playbook-title{margin-top:22px}.playbook-badge{display:inline-flex;border:1px solid rgba(37,99,255,.45);background:rgba(37,99,255,.12);border-radius:999px;padding:7px 11px;color:#dbeafe;font-family:"JetBrains Mono";font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.playbook-title h3{font-family:Orbitron,Inter,sans-serif;font-size:1.65rem;line-height:1.1;margin:14px 0 8px}.playbook-title p{color:var(--muted);margin:0;max-width:410px}.flow-list{margin-top:18px;display:grid;gap:8px}.flow-item{display:flex;gap:12px;align-items:flex-start;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.065);border-radius:16px;padding:12px}.flow-item.active{border-color:rgba(255,209,26,.55);background:rgba(255,209,26,.09)}.flow-item span{flex:0 0 30px;height:30px;display:grid;place-items:center;border-radius:10px;background:rgba(37,99,255,.18);color:#fff;font-family:Orbitron;font-weight:900}.flow-item.active span{background:var(--yellow);color:#081220}.flow-item strong{display:block;color:#fff}.flow-item small{display:block;color:var(--muted);font-size:.8rem;line-height:1.35}.flow-arrow{color:var(--yellow);font-size:1rem;margin-left:15px;line-height:1;opacity:.85}
+  
+
+    /* Mobile cleanup pass */
+    .light-section .label{
+      color:#0b1220;
+      background:rgba(37,99,255,.11);
+      border-color:rgba(37,99,255,.28);
+    }
+    @media (max-width:760px){
+      .container{width:min(100% - 32px,var(--max));}
+      .nav-inner{height:70px;gap:12px;}
+      .nav-links{top:70px;left:16px;right:16px;gap:12px;}
+      .brand{font-size:1rem;gap:10px;}
+      .mark{width:36px;height:36px;border-radius:12px;}
+      .mark:before{font-size:18px;}
+      .wordmark{letter-spacing:-.02em;}
+      .menu-btn{padding:8px 10px;}
+
+      .hero{padding:46px 0 28px;}
+      .hero-layout{gap:28px;}
+      .eyebrow,.label{font-size:.66rem;line-height:1.35;letter-spacing:.04em;white-space:normal;}
+      .hero h1{font-size:clamp(2.05rem,10vw,2.8rem);line-height:1.08;letter-spacing:-.04em;margin:18px 0 16px;}
+      .lead{font-size:1rem;line-height:1.55;}
+      .cta-row{display:grid;gap:10px;margin-top:24px;}
+      .btn{width:100%;padding:12px 16px;}
+      .btn-large{padding:13px 18px;font-size:.96rem;}
+      .mini-proof{display:grid;gap:7px;font-size:.86rem;margin-top:18px;}
+
+      .hero-panel{border-radius:22px;}
+      .panel-top{padding:13px 14px;gap:10px;}
+      .panel-top .brand{font-size:.92rem;}
+      .panel-top .mark{width:30px!important;height:30px!important;}
+      .domain-pill{font-size:.75rem;padding:6px 9px;}
+      .panel-body{padding:14px;}
+      .playbook-card{min-height:auto;padding:16px;border-radius:18px;}
+      .playbook-title{margin-top:0;}
+      .playbook-badge{font-size:.62rem;padding:6px 9px;}
+      .playbook-title h3{font-size:1.28rem;margin:12px 0 6px;}
+      .playbook-title p{font-size:.9rem;line-height:1.45;}
+      .flow-list{margin-top:14px;gap:7px;}
+      .flow-item{padding:10px;border-radius:14px;gap:10px;}
+      .flow-item span{flex-basis:26px;width:26px;height:26px;border-radius:8px;font-size:.82rem;}
+      .flow-item strong{font-size:.9rem;}
+      .flow-item small{font-size:.75rem;}
+      .flow-arrow{display:none;}
+      .dashboard-row{grid-template-columns:repeat(3,1fr)!important;gap:8px;margin-top:12px;}
+      .dash-card{padding:11px 8px;text-align:center;border-radius:14px;}
+      .dash-card strong{font-size:1rem;}
+      .dash-card span{font-size:.68rem;line-height:1.25;}
+      .marquee-wrap{margin-top:28px;padding:10px 0;}
+      .pill{font-size:.72rem;padding:7px 10px;}
+
+      section{padding:56px 0;}
+      .section-head{margin-bottom:26px;}
+      .section-head.center{text-align:left;}
+      .section-head h2{font-size:clamp(1.65rem,8vw,2.15rem);line-height:1.13;letter-spacing:-.03em;margin:13px 0;}
+      .section-head p{font-size:.98rem;line-height:1.55;}
+      .split{gap:20px;}
+      .card-grid,.workflow,.teams,.resource-grid{grid-template-columns:1fr!important;}
+      .card{padding:18px;border-radius:18px;}
+      .card h3{font-size:1rem;}
+      .card p{font-size:.92rem;}
+      .phase:before{font-size:2.1rem;right:16px;top:12px;}
+
+      .video-shell{border-radius:22px;}
+      .video-top{display:grid;gap:8px;padding:14px 16px;font-size:.7rem;}
+      .video-embed{padding:12px;}
+      .video-embed wistia-player{border-radius:16px;}
+
+      .resource-card:after{right:14px;top:14px;font-size:.68rem;}
+      .resource-kicker{font-size:.65rem;padding:5px 8px;}
+      .file-meta{gap:6px;margin:12px 0 16px;}
+      .file-meta span{font-size:.68rem;}
+      .resource-actions{display:grid;gap:9px;}
+      .resource-card .btn{font-size:.86rem;padding:10px 12px;}
+      .resource-note{text-align:left;font-size:.86rem;}
+
+      .cta{padding:62px 0;}
+      .cta h2{font-size:clamp(1.85rem,9vw,2.45rem);line-height:1.1;}
+      .trust{display:grid;gap:9px;}
+      .trust span{border-radius:16px;text-align:left;}
+      footer{padding:34px 0 22px;}
+      .footer-links{justify-content:center;gap:12px;font-size:.92rem;}
+      .bottom{font-size:.82rem;line-height:1.45;}
+    }
+
+    @media (max-width:380px){
+      .container{width:min(100% - 24px,var(--max));}
+      .hero h1{font-size:1.95rem;}
+      .panel-top{grid-template-columns:1fr;align-items:flex-start;}
+      .domain-pill{width:max-content;}
+      .dashboard-row{grid-template-columns:1fr!important;}
+    }
+
   </style>
 </head>
 <body>
 <div class="page"><div class="grid-bg"></div>
   <header class="nav" id="top">
     <div class="container nav-inner">
-      <a class="logo" href="#top"><span class="bolt">⚡</span><span>FRC Agent Farm</span></a>
+      <a class="brand" href="#top" aria-label="PitCrew Home"><span class="mark"></span><span class="wordmark">Pit<span>Crew</span></span></a>
       <nav class="nav-links" id="navLinks">
-        <a href="#features">Features</a><a href="#demo">Demo Video</a><a href="#how">How It Works</a><a href="#agents">The Agents</a><a href="#teams">For Teams</a><a href="#get-started">Get Started</a>
+        <a href="#product">Product</a><a href="#demo">Demo</a><a href="#resources">Resources</a><a href="#workflow">Workflow</a><a href="#teams">For Teams</a><a href="#get-started">Get Started</a>
       </nav>
       <a class="btn btn-primary nav-cta" href="https://frc-agent-farm.manus.space" target="_blank" rel="noopener">Launch App</a>
       <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
@@ -37,73 +133,187 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-layout">
         <div class="fade-up">
-          <div class="eyebrow">⚡ 17 AI Agents · FRC & FTC · Build Season Ready</div>
-          <h1 id="hero-title">Your <span class="gradient-text">AI-Powered</span><br>Robotics Team</h1>
-          <p class="lead">Commander coordinates a farm of 17 specialist AI agents — from Rulebook to Scribe — so your small team can build, compete, and win like a team of 50.</p>
-          <div class="cta-row"><a class="btn btn-primary btn-large" href="https://frc-agent-farm.manus.space" target="_blank" rel="noopener">Launch the App →</a><a class="btn btn-large" href="#demo">▶ Watch Demo</a></div>
-          <div class="stats"><div class="stat"><strong class="counter" data-target="17">0</strong><span>specialist agents</span></div><div class="stat"><strong class="counter" data-target="6">0</strong><span>week build season</span></div><div class="stat"><strong class="counter" data-target="1">0</strong><span>Commander</span></div></div>
+          <div class="eyebrow">🏁 Mentor Assist · FRC & FTC · Build Season Ready</div>
+          <h1 id="hero-title">Run a better build season. <span class="blue">Together.</span></h1>
+          <p class="lead">PitCrew is a mentor-assist build-season command center for small and rebuilding FRC & FTC teams. Turn kickoff decisions and build-season work into organized plans, tasks, checklists, and documentation — without replacing mentors or student thinking.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary btn-large" href="https://frc-agent-farm.manus.space" target="_blank" rel="noopener">Launch the App →</a>
+            <a class="btn btn-large" href="#demo">▶ Watch Demo</a>
+          </div>
+          <div class="mini-proof">
+            <span>✓ Built for mentors and student leaders</span><span>✓ Organize the chaos</span><span>✓ Keep students owning the work</span>
+          </div>
         </div>
-        <div class="mockup fade-up" style="transition-delay:120ms">
-          <div class="mock-head"><div class="lights"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><span class="mono">commander.session/live</span></div>
-          <div class="mock-body">
-            <div class="chat"><div class="user-line">Student: We just watched the game reveal. What should we build?</div><div class="commander-line">Commander: Routing kickoff strategy through Rulebook, Scout, Ledger, and Scribe. Generating MoSCoW priorities and MCR definition...</div></div>
-            <div class="agent-status"><div class="agent-mini"><span>📖 Rulebook</span><span class="badge done">done</span></div><div class="agent-mini"><span>🔧 CAD-Bot</span><span class="badge done">ready</span></div><div class="agent-mini"><span>⚡ Volt</span><span class="badge active">active</span></div><div class="agent-mini"><span>💻 Ada</span><span class="badge idle">queued</span></div><div class="agent-mini"><span>🏆 Scout</span><span class="badge active">active</span></div><div class="agent-mini"><span>📓 Scribe</span><span class="badge done">saved</span></div></div>
+        <div class="hero-panel fade-up" style="transition-delay:.12s">
+          <div class="panel-top"><div class="brand"><span class="mark" style="width:34px;height:34px;border-radius:10px"></span><span class="wordmark">Pit<span>Crew</span></span></div><span class="domain-pill">🌐 the-pitcrew.co</span></div>
+          <div class="panel-body">
+            <div class="playbook-card" aria-label="PitCrew workflow preview">
+              <div class="playbook-title">
+                <span class="playbook-badge">Team 1557 · Build Week 5</span>
+                <h3>Today’s PitCrew Plan</h3>
+                <p>Turn one team discussion into clear next steps everyone can see.</p>
+              </div>
+              <div class="flow-list">
+                <div class="flow-item active"><span>1</span><div><strong>Kickoff notes</strong><small>Game goals and team constraints captured</small></div></div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-item"><span>2</span><div><strong>Strategy board</strong><small>Priorities sorted into must, should, and could</small></div></div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-item"><span>3</span><div><strong>Build tasks</strong><small>Prototype, CAD, checklist, and notebook work assigned</small></div></div>
+              </div>
+            </div>
+            <div class="dashboard-row">
+              <div class="dash-card"><strong>Plan</strong><span>Strategy notes</span></div>
+              <div class="dash-card"><strong>Build</strong><span>Tasks & checklists</span></div>
+              <div class="dash-card"><strong>Doc</strong><span>Notebook entries</span></div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="marquee-wrap"><div class="marquee" id="marquee"></div></div>
+      <div class="marquee-wrap" aria-hidden="true"><div class="marquee">
+        <span class="pill">📋 Strategy Notes</span><span class="pill">✅ Priority Boards</span><span class="pill">🧪 Prototype Plans</span><span class="pill">📐 CAD Tasks</span><span class="pill">📅 Build Schedules</span><span class="pill">🦺 Checklists</span><span class="pill">📓 Engineering Notebook</span><span class="pill">👥 Mentor Reviews</span>
+        <span class="pill">📋 Strategy Notes</span><span class="pill">✅ Priority Boards</span><span class="pill">🧪 Prototype Plans</span><span class="pill">📐 CAD Tasks</span><span class="pill">📅 Build Schedules</span><span class="pill">🦺 Checklists</span><span class="pill">📓 Engineering Notebook</span><span class="pill">👥 Mentor Reviews</span>
+      </div></div>
     </section>
 
-    <section id="demo" aria-labelledby="demo-title">
+    <section id="product">
+      <div class="container split">
+        <div class="section-head fade-up">
+          <span class="label">The Problem</span>
+          <h2>Small teams do not need more noise. They need a better system.</h2>
+          <p>Kickoff and build season create too many decisions at once: strategy, prototypes, CAD, wiring, software, fabrication, drive practice, judging, and documentation.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card fade-up"><div class="icon">⏱️</div><h3>Limited Time</h3><p>Build season moves fast. Teams need to turn discussion into action before momentum is lost.</p></article>
+          <article class="card fade-up"><div class="icon">👥</div><h3>Limited People</h3><p>Small and rebuilding teams need a process that fits their actual students, mentors, tools, and budget.</p></article>
+          <article class="card fade-up"><div class="icon">📓</div><h3>Too Much to Track</h3><p>Tasks, checklists, design decisions, prototype results, and notebook entries can fall through the cracks.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="light-section" id="workflow">
       <div class="container">
         <div class="section-head center fade-up">
-          <span class="label">WATCH THE DEMO</span>
-          <h2 id="demo-title">See Commander and the Agent Farm in Action</h2>
-          <p>Watch how the platform turns kickoff strategy, agent routing, build-season tracking, and documentation into one coordinated workflow for FRC and FTC teams.</p>
+          <span class="label">What PitCrew Helps You Do</span>
+          <h2>Turn team conversations into organized build-season work.</h2>
+          <p>Students and mentors ask questions in plain English. PitCrew helps convert those conversations into outputs the team can review, edit, assign, and act on.</p>
         </div>
-        <div class="video-shell fade-up">
-          <div class="video-top"><span>frc-agent-farm.demo</span><span>Wistia · 16:9</span></div>
-          <div class="video-embed">
-            <wistia-player media-id="589h0kdsr9" aspect="1.7777777777777777"></wistia-player>
-          </div>
-          <div class="video-note">
-            <p>Use this video as the walkthrough for mentors, coaches, and student leaders who want to see the system before they try it.</p>
-            <a class="btn" href="https://kevin-bongiovanni.wistia.com/folders/h5xz9trgl1" target="_blank" rel="noopener">View Full Video Library →</a>
-          </div>
+        <div class="card-grid workflow">
+          <article class="card phase fade-up" data-step="01"><div class="icon">🎯</div><h3>Plan with Confidence</h3><p>Turn kickoff decisions into clear strategy notes, goals, priorities, and milestones.</p></article>
+          <article class="card phase fade-up" data-step="02"><div class="icon">🧪</div><h3>Prototype Smarter</h3><p>Capture assumptions, tests, risks, results, and next steps before moving into CAD.</p></article>
+          <article class="card phase fade-up" data-step="03"><div class="icon">📐</div><h3>Organize Build Work</h3><p>Create CAD requests, fabrication tasks, build schedules, and ownership in one place.</p></article>
+          <article class="card phase fade-up" data-step="04"><div class="icon">📓</div><h3>Document Everything</h3><p>Keep notes, decisions, photos, test results, and student reflections ready for review.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="problem"><div class="container split"><div class="section-head fade-up"><span class="label">THE CHALLENGE</span><h2>6 Weeks. 200 Pages of Rules.<br>One Overworked Mentor.</h2><p>Every January, thousands of FRC teams open the game manual and face the same impossible task: design a competitive robot, write the code, wire the electronics, manage the budget, document everything for judges, plan for competition — and do it in 6 weeks with a handful of students and one mentor who has a day job.</p><p>Most teams don't fail because of bad students. They fail because no team of 10 people can simultaneously be mechanical engineers, software developers, electrical technicians, and award-winning documentarians.</p><p>That's what the Agent Farm is for.</p></div><div class="card-grid"><article class="card fade-up"><div class="icon">🕐</div><h3>No Time</h3><p>The build season is 6 weeks. There's no time to research every rule, calculate every gear ratio, and write every line of code from scratch.</p></article><article class="card fade-up"><div class="icon">👥</div><h3>Small Teams</h3><p>Most competitive FRC teams have 30–50 students. Most real teams have 8–12. The gap in bandwidth is enormous.</p></article><article class="card fade-up"><div class="icon">📋</div><h3>Too Much to Track</h3><p>CAD requests, fabrication status, prototype results, engineering notebook entries, grant deadlines — it all falls through the cracks without a system.</p></article></div></div></section>
+    <section id="demo">
+      <div class="container">
+        <div class="section-head center fade-up">
+          <span class="label">Demo Video</span>
+          <h2>See how PitCrew supports a real build-season workflow.</h2>
+          <p>The video shows how the system can help mentors and student leaders organize kickoff planning and build-season decisions.</p>
+        </div>
+        <div class="video-shell fade-up">
+          <div class="video-top"><span>▶ PitCrew walkthrough</span><span>the-pitcrew.co</span></div>
+          <div class="video-embed"><wistia-player media-id="589h0kdsr9" aspect="1.7777777777777777"></wistia-player></div>
+        </div>
+      </div>
+    </section>
 
-    <section id="solution"><div class="container"><div class="section-head center fade-up"><span class="label">THE SOLUTION</span><h2>One Commander.<br>17 Specialists.<br>Zero Dropped Balls.</h2><p>FRC Agent Farm deploys a coordinated team of 17 AI specialists — each with a distinct persona, domain expertise, and behavioral constraints — under a single orchestrator called Commander.</p><p>Students talk to Commander. Commander reads the message, determines which specialists to activate, activates them in the correct dependency order, and synthesizes their outputs into one response. The pipeline is invisible. The results are not.</p><div class="pipeline"><span class="pipe-node">Student Message</span><span class="arrow">→</span><span class="pipe-node">Commander</span><span class="arrow">→</span><span class="pipe-node">Rulebook + CAD-Bot + Volt + Ada</span><span class="arrow">→</span><span class="pipe-node">Unified Response</span></div></div><div class="card-grid"><article class="card fade-up"><div class="icon">🤖</div><h3>Intelligent Routing</h3><p>Commander automatically activates the right agents for every question. Ask about a shooter mechanism and Rulebook, CAD-Bot, Volt, Ada, and Stress-Test all contribute — in the right order.</p></article><article class="card fade-up"><div class="icon">📍</div><h3>Location-Aware</h3><p>Set your team's city and state. Grants and Megaphone automatically research local funding, name specific sponsors in your area, and propose community events at nearby venues.</p></article><article class="card fade-up"><div class="icon">📓</div><h3>Auto-Documentation</h3><p>Scribe monitors every session and generates structured Engineering Notebook entries automatically — with agent math, citations, and prompts for student reflections. Never start a notebook entry from scratch again.</p></article></div></div></section>
 
-    <section id="features"><div class="container"><div class="section-head fade-up"><span class="label">THE PLATFORM</span><h2>Not Just a Chatbot.<br>A Complete Build Season System.</h2><p>Commander is the AI brain. But the platform wraps it in a full suite of build season tools — so every decision, task, and deadline lives in one place.</p></div><div class="card-grid features" id="featureGrid"></div></div></section>
 
-    <section id="how"><div class="container"><div class="section-head center fade-up"><span class="label">HOW IT WORKS</span><h2>From Kickoff to Competition<br>in Three Phases</h2></div><div class="timeline"><article class="card phase fade-up"><h3>Phase 1 — Kickoff Week</h3><p class="quote">"We just watched the game reveal. What should we build?"</p><ul><li>Open the Kickoff Wizard. Describe the game and your team's constraints.</li><li>Commander activates Rulebook (rules), Scout (strategy), and Ledger (budget).</li><li>The wizard generates a MoSCoW board, a decision matrix, and a Minimum Competitive Robot definition.</li><li>Scribe saves a Game Cheat Sheet to the Notebook automatically.</li><li><strong>Result:</strong> The whole team aligned on strategy in 2 hours instead of 2 weeks.</li></ul></article><article class="card phase fade-up"><h3>Phase 2 — Build Season (Weeks 1–6)</h3><p class="quote">"We need to design a floor intake for a 4-inch game piece."</p><ul><li>Commander activates CAD-Bot, Volt, Ada, OSHA, and Stress-Test.</li><li>The Prototype Tracker tracks risk levels and Gate 2 approvals.</li><li>Approved prototypes auto-create CAD requests. Ready-to-make CAD requests promote to Fabrication.</li><li>The Build Calendar shows every fab task and CAD request in the correct week automatically.</li><li><strong>Result:</strong> Every subsystem has a design, a wiring plan, code, and a test protocol — generated in minutes.</li></ul></article><article class="card phase fade-up"><h3>Phase 3 — Competition Prep</h3><p class="quote">"We need a pick list for Orlando Regional and a pre-match checklist."</p><ul><li>Scout analyzes match data and EPA scores to generate a ranked alliance pick list.</li><li>Stress-Test generates a pre-match pit checklist for every match.</li><li>Grants drafts sponsorship letters scoped to your team's location.</li><li>Legacy and Spark prepare award submission talking points.</li><li>Scribe compiles the full Engineering Notebook portfolio.</li><li><strong>Result:</strong> Walk into the pit with a pick list, a checklist, and a judge-ready portfolio.</li></ul></article></div></div></section>
+    <section id="resources">
+      <div class="container">
+        <div class="section-head center fade-up">
+          <span class="label">Documents & Tutorials</span>
+          <h2>Download the PitCrew playbook and team tutorials.</h2>
+          <p>Give coaches, mentors, and student leaders a simple path to understand the app, then run the right tutorial for their program.</p>
+        </div>
+        <div class="resource-grid">
+          <article class="card resource-card featured fade-up">
+            <div class="icon">📘</div>
+            <span class="resource-kicker">Start Here</span>
+            <h3>PitCrew Playbook</h3>
+            <p>The overview document for coaches and mentors. Explains the purpose of PitCrew, how the mentor-assist workflow works, and how to use it without replacing student thinking.</p>
+            <div class="file-meta"><span>PDF</span><span>Playbook</span><span>Mentor Overview</span></div>
+            <div class="resource-actions">
+              <a class="btn btn-yellow" href="docs/pitcrew-playbook.pdf" download>Download Playbook ↓</a>
+            </div>
+          </article>
+          <article class="card resource-card fade-up">
+            <div class="icon">🏁</div>
+            <span class="resource-kicker">FRC Tutorial</span>
+            <h3>FRC Team Tutorial</h3>
+            <p>A step-by-step guide for FRC teams using PitCrew during kickoff, strategy planning, prototype decisions, CAD handoffs, build schedules, checklists, and notebook documentation.</p>
+            <div class="file-meta"><span>PDF</span><span>FRC</span><span>Kickoff to Build</span></div>
+            <div class="resource-actions">
+              <a class="btn btn-primary" href="docs/pitcrew-frc-tutorial.pdf" download>Download FRC Tutorial ↓</a>
+            </div>
+          </article>
+          <article class="card resource-card fade-up">
+            <div class="icon">🤖</div>
+            <span class="resource-kicker">FTC Tutorial</span>
+            <h3>FTC Team Tutorial</h3>
+            <p>A practical guide for FTC teams using PitCrew to organize constraints, parts, programming ability, driver practice, judging notes, meet preparation, and documentation.</p>
+            <div class="file-meta"><span>PDF</span><span>FTC</span><span>Meets & Judging</span></div>
+            <div class="resource-actions">
+              <a class="btn btn-primary" href="docs/pitcrew-ftc-tutorial.pdf" download>Download FTC Tutorial ↓</a>
+            </div>
+          </article>
+        </div>
+        <p class="resource-note fade-up">Tip: place the three PDFs in a <strong>docs</strong> folder in your GitHub Pages repository using the filenames shown in these download links.</p>
+      </div>
+    </section>
 
-    <section id="agents"><div class="container"><div class="section-head center fade-up"><span class="label">THE AGENTS</span><h2>17 Specialists.<br>One Team.</h2><p>Every agent has a distinct persona, behavioral constraints, and domain of expertise. They don't just answer questions — they enforce standards. CAD-Bot always justifies motor choices with torque math. Rulebook never guesses a rule. Scribe never invents a meeting that didn't happen.</p></div><div class="card-grid agents" id="agentGrid"></div></div></section>
+    <section id="teams">
+      <div class="container">
+        <div class="section-head center fade-up">
+          <span class="label">For Teams</span>
+          <h2>Built for the teams that need structure the most.</h2>
+          <p>PitCrew is designed for mentors, coaches, and student leaders who want a practical system for planning, building, testing, and documenting.</p>
+        </div>
+        <div class="card-grid teams">
+          <article class="card fade-up"><div class="icon">🔧</div><h3>Small FRC Teams</h3><p>Give a 5–12 student team a repeatable process for strategy, prototype decisions, CAD handoffs, and documentation.</p></article>
+          <article class="card fade-up"><div class="icon">🤖</div><h3>FTC Teams</h3><p>Organize parts, tools, programming ability, driver practice, judging notes, and meet deadlines around the team’s real constraints.</p></article>
+          <article class="card fade-up"><div class="icon">🧭</div><h3>Rebuilding Programs</h3><p>Help new students and new mentors understand what to do next without turning AI into a replacement for learning.</p></article>
+        </div>
+      </div>
+    </section>
 
-    <section id="teams"><div class="container"><div class="section-head fade-up"><span class="label">FOR TEAMS</span><h2>Built for the Teams<br>That Need It Most</h2></div><div class="card-grid teams"><article class="card fade-up"><div class="icon">🛠️</div><h3>The Small Team</h3><p class="team-tag">5–10 students, 1–2 mentors</p><p>You're outnumbered. The Agent Farm gives you the strategic depth of a 50-student team without needing 50 students. Commander handles the research, the math, and the documentation. Your students handle the build.</p></article><article class="card fade-up"><div class="icon">🚀</div><h3>The Rebuilding Team</h3><p class="team-tag">New mentor, mixed experience levels</p><p>Starting from scratch is hard. The Kickoff Wizard walks your team through strategy step by step. Guide interviews new students and matches them to the right roles. Scribe builds the Engineering Notebook automatically.</p></article><article class="card fade-up"><div class="icon">🏁</div><h3>The Competitive Team</h3><p class="team-tag">Experienced team, wants to go further</p><p>You already know how to build a robot. The Agent Farm helps you build a better one, faster. Scout generates alliance pick lists from match data. Stress-Test generates rigorous test protocols. Grants finds local funding you didn't know existed.</p></article></div></div></section>
-
-    <section id="proof"><div class="container testimonial fade-up"><span class="label">WHAT TEAMS SAY</span><h2>"We finished the robot<br>three days early."</h2><div class="card testimonial-card"><p>"Before the Agent Farm, our mentor spent every night reading the game manual and writing code. Now Commander handles the research and Ada writes the first draft of every subsystem. We spent that time actually building and practicing. We finished the robot three days early for the first time in five years."</p><strong>— Kevin B., Team Mentor · FRC Team, Florida</strong></div><p style="color:var(--muted);font-style:italic">Note: This is a representative quote. Replace with a real testimonial before launch.</p></div></section>
-
-    <section id="get-started"><div class="container testimonial fade-up"><span class="label">GET STARTED</span><h2>Your Season Starts Here</h2><p class="lead" style="margin-inline:auto">Join the teams using AI to compete smarter. Launch the app, set up your team, run your first Kickoff Wizard, and have a MoSCoW board ready before the end of Kickoff Day.</p><div class="cta-row" style="justify-content:center"><a class="btn btn-primary btn-large" href="https://frc-agent-farm.manus.space" target="_blank" rel="noopener">Launch FRC Agent Farm →</a><a class="btn btn-large" href="#demo">▶ Watch Demo</a></div><div class="trust"><span>🔒 No credit card required</span><span>⚡ Set up in under 10 minutes</span><span>🤖 Works for FRC and FTC</span></div></div></section>
+    <section class="cta" id="get-started">
+      <div class="container fade-up">
+        <span class="label">Get Started</span>
+        <h2>Your build season needs a pit crew.</h2>
+        <p class="lead" style="margin-inline:auto">Use PitCrew to turn kickoff decisions and team conversations into organized plans, tasks, checklists, and documentation.</p>
+        <div class="cta-row" style="justify-content:center">
+          <a class="btn btn-primary btn-large" href="https://frc-agent-farm.manus.space" target="_blank" rel="noopener">Launch App →</a>
+          <a class="btn btn-yellow btn-large" href="#resources">Download Resources</a>
+          <a class="btn btn-large" href="https://kevin-bongiovanni.wistia.com/folders/h5xz9trgl1" target="_blank" rel="noopener">View Video Library</a>
+        </div>
+        <div class="trust"><span>🔒 No credit card required</span><span>🏁 Built for FRC & FTC</span><span>🧠 Mentor-assist, not mentor replacement</span></div>
+      </div>
+    </section>
   </main>
 
-  <footer><div class="container"><div class="footer-grid"><div class="logo"><span class="bolt">⚡</span><span>FRC Agent Farm · Your AI-powered robotics team</span></div><div class="footer-links"><a href="#features">Features</a><a href="#demo">Demo Video</a><a href="#how">How It Works</a><a href="#agents">The Agents</a><a href="https://frc-agent-farm.manus.space" target="_blank" rel="noopener">Launch App</a><a href="https://kevin-bongiovanni.wistia.com/folders/h5xz9trgl1" target="_blank" rel="noopener">Video Library</a></div><div class="footer-right">Built for FIRST Robotics teams everywhere</div></div><div class="bottom">© 2026 FRC Agent Farm · Not affiliated with FIRST Inspires</div></div></footer>
+  <footer>
+    <div class="container footer-grid">
+      <div class="brand"><span class="mark"></span><span class="wordmark">Pit<span>Crew</span></span></div>
+      <div class="footer-links"><a href="#product">Product</a><a href="#demo">Demo</a><a href="#resources">Resources</a><a href="#teams">For Teams</a><a href="https://frc-agent-farm.manus.space" target="_blank" rel="noopener">Launch App</a></div>
+      <div class="footer-right">the-pitcrew.co<br/>Build · Plan · Win</div>
+    </div>
+    <div class="container bottom">© 2026 PitCrew · Not affiliated with FIRST Inspires. Use AI as a mentor-assist tool; students should make and understand the design decisions.</div>
+  </footer>
 </div>
+
 <script>
-const agents=[['⚡','Commander','Head Coach & Orchestrator','Uses MoSCoW exclusively. Enforces KISS. Rejects overly complex designs.'],['📖','Rulebook','Game Manual & Requirements','Never guesses a rule. Every constraint cites a rule number (e.g., "Rule R104").'],['🔧','CAD-Bot','Mechanical Design','Always justifies motor choices with torque/RPM math. Never suggests rule-violating mechanisms.'],['💻','Ada','Software & Programming','Uses WPILib Java (FRC) or FTC SDK Java (FTC). Always sets software limits.'],['👁','Optic','Vision & AprilTag Targeting','Accounts for latency using WPILib pose estimator buffers. Calculates feedforward for shoot-on-the-move.'],['⚡','Volt','Electrical, CAN Bus & Pneumatics','States wire gauge (AWG) and breaker size for every component. Designs valid CAN topologies.'],['🏆','Scout','Strategy & Scouting','Bases all recommendations strictly on provided data. Distinguishes potential from actual performance.'],['🦺','OSHA','Safety Inspection','Checks against the official FRC Inspection Checklist. Flags violations before fabrication begins.'],['💰','Ledger','Budget & Parts','Enforces Rule R301 ($600 fair market value limit). Checks donated parts, not just purchased ones.'],['🧪','Stress-Test','QA & Pre-Match Checklists','Assumes worst-case scenarios. Every test case includes Objective, Setup, Steps, Expected Result, Failure Condition.'],['📝','Grants','Grant Writing — Location-Aware','Researches all four funding tiers (local, state, national, federal). Names specific programs and deadlines.'],['📣','Megaphone','Outreach — Location-Aware','Identifies local schools, libraries, and maker spaces by name. Proposes realistic events for the team\'s city.'],['🏅','Legacy','FIRST Impact Award','Never invents impact metrics. Requires real numbers. Documents three-year community impact history.'],['✨','Spark','Engineering Inspiration Award','Documents measurable STEM recruitment metrics. Creates pit interview talking points.'],['🎨','Aesthetics','Industrial Design & Judges\' Award','Articulates the balance of form and function. Identifies unique team dynamics for Judges\' Award pitches.'],['📓','Scribe','Engineering Notebook & Portfolio','Never invents meetings or prototypes. Compiles actual agent outputs as evidence. Always prompts students for reflections.'],['🧭','Guide','Student Onboarding & Culture','Never rejects students for lack of prior skills. Generates a specific role recommendation for every student interviewed.']];
-const features=[['⚡','Commander Chat','Ask anything. 17 agents activate automatically. Streaming responses with session history.'],['🗺','Kickoff Wizard','4-step guided workflow: game notes → strategy → decision matrix → MCR. Auto-saves a Game Cheat Sheet to the Notebook.'],['📋','MoSCoW Board','Drag-and-drop priority management with subsystem tags. Toggle between By Priority and By Subsystem views.'],['🧪','Prototype Tracker','Risk levels, Gate 2 approval, prototype notes and photos. Approved prototypes auto-create CAD requests.'],['📐','CAD Request Board','Kanban board with 8 statuses. Chat with CAD-Bot directly from any card. One-click promote to Fabrication.'],['✂️','Scope Cut List','Pre-planned triage decisions agreed before the pressure hits. Never Cut / Cut by Week N. Superseded archive.'],['🔧','Fabrication Tracker','Table and Kanban views. Track process, material, quantity, assignee, and due date for every part.'],['📅','Build Calendar','4-week windowed view. Fab tasks and CAD requests auto-populate from their trackers. Season events (Regionals, scrimmages) shown as badges.'],['👥','Assignments & Workload','Personal task queue. Team load bars. Unassigned items with quick-assign. Aggregates across all trackers.'],['📓','Scribe Notebook','Auto-generated engineering notebook entries. Photo attachments. Markdown export. Mentor print view.'],['🏠','Team Dashboard','Live overview of every phase. MoSCoW, Prototype, CAD, and Fab summary widgets. Resume Kickoff banner.'],['🤖','Agent Roster','Real-time pipeline visualization. See which agents are idle, active, done, or skipped during any session.']];
-function makeFeature([icon,title,desc],i){return `<article class="card feature-card fade-up" style="transition-delay:${(i%8)*38}ms"><div class="icon">${icon}</div><h3>${title}</h3><p>${desc}</p></article>`}
-function makeAgent([icon,name,role,constraint],i){return `<article class="card agent-card fade-up" tabindex="0" data-copy="${constraint.replace(/"/g,'&quot;')}" style="transition-delay:${(i%8)*38}ms"><div class="icon">${icon}</div><h3>${name}</h3><div class="agent-role">${role}</div><p class="agent-constraint">${constraint}</p></article>`}
-document.getElementById('featureGrid').innerHTML=features.map(makeFeature).join('');document.getElementById('agentGrid').innerHTML=agents.map(makeAgent).join('');
-const pills=agents.map(a=>`${a[0]} ${a[1]}`);document.getElementById('marquee').innerHTML=[...pills,...pills].map(p=>`<span class="pill">${p}</span>`).join('');
-const nav=document.querySelector('.nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>8));document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
-const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target)}})},{threshold:.14});document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
-let counted=false;const countIO=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)&&!counted){counted=true;document.querySelectorAll('.counter').forEach(el=>{let target=+el.dataset.target,cur=0,step=Math.max(1,Math.ceil(target/30));let tick=()=>{cur=Math.min(target,cur+step);el.textContent=cur;if(cur<target)requestAnimationFrame(tick)};tick()})}},{threshold:.4});document.querySelectorAll('.stats').forEach(el=>countIO.observe(el));
-document.addEventListener('click',e=>{const card=e.target.closest('.agent-card');if(!card)return;navigator.clipboard?.writeText(card.dataset.copy);card.style.borderColor='rgba(16,185,129,.65)';setTimeout(()=>card.style.borderColor='',900)});
+  const nav=document.querySelector('.nav');
+  const navLinks=document.getElementById('navLinks');
+  const menuBtn=document.getElementById('menuBtn');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>10));
+  menuBtn?.addEventListener('click',()=>navLinks.classList.toggle('open'));
+  navLinks?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+  const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('in-view')})},{threshold:.12});
+  document.querySelectorAll('.fade-up').forEach((el,i)=>{el.style.transitionDelay=el.style.transitionDelay||`${Math.min(i*35,260)}ms`;observer.observe(el)});
 </script>
 </body>
 </html>
