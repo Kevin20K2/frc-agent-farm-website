@@ -1,43 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PitCrew | Mentor-assist build-season command center</title>
-  <meta name="description" content="PitCrew helps small and rebuilding FRC & FTC teams turn kickoff decisions and build-season work into organized plans, tasks, checklists, and documentation." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
-  <script src="https://fast.wistia.com/player.js" async></script>
-  <script src="https://fast.wistia.com/embed/589h0kdsr9.js" async type="module"></script>
-  <style>
-    :root{--navy:#071225;--panel:#101d34;--blue:#2563ff;--cyan:#00a3ff;--yellow:#ffd11a;--text:#eef6ff;--muted:#aab8d0;--border:rgba(140,178,255,.22);--shadow:0 28px 90px rgba(0,0,0,.42);--max:1180px;--radius:28px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--text);line-height:1.6;background:radial-gradient(circle at 12% 5%,rgba(37,99,255,.38),transparent 28rem),radial-gradient(circle at 88% 4%,rgba(255,209,26,.16),transparent 25rem),linear-gradient(180deg,#061020,#091326 54%,#060b16);overflow-x:hidden}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.page{position:relative;isolation:isolate}.grid-bg{position:fixed;inset:0;z-index:-2;opacity:.22;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,#000 0,#000 38%,transparent 86%)}.orb{position:fixed;z-index:-1;border-radius:999px;filter:blur(50px);opacity:.42;pointer-events:none;animation:float 9s ease-in-out infinite alternate}.orb.one{width:250px;height:250px;background:var(--blue);left:-80px;top:180px}.orb.two{width:310px;height:310px;background:#0ea5ff;right:-120px;top:520px;animation-delay:2s}.orb.three{width:200px;height:200px;background:var(--yellow);left:60%;bottom:80px;opacity:.16;animation-delay:4s}@keyframes float{to{transform:translate3d(24px,-26px,0) scale(1.05)}}.container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}.nav{position:sticky;top:0;z-index:50;background:rgba(6,14,28,.68);backdrop-filter:blur(18px);border-bottom:1px solid transparent;transition:.25s}.nav.scrolled{background:rgba(6,14,28,.94);border-color:rgba(80,118,180,.28);box-shadow:0 12px 40px rgba(0,0,0,.28)}.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;min-width:max-content}.mark{width:44px;height:44px;border-radius:14px;border:2px solid rgba(255,255,255,.84);display:grid;place-items:center;position:relative;background:linear-gradient(145deg,rgba(37,99,255,.36),rgba(7,18,37,.96));box-shadow:0 0 32px rgba(37,99,255,.26),inset 0 0 22px rgba(255,255,255,.04)}.mark:before{content:"🔧";font-size:21px;transform:rotate(-38deg);filter:saturate(1.25)}.mark:after{content:"";position:absolute;right:-4px;bottom:-4px;width:13px;height:13px;border-radius:4px;background:var(--yellow);border:2px solid var(--navy)}.wordmark{font-family:Orbitron,Inter,sans-serif;font-size:1.25rem;letter-spacing:-.02em}.wordmark span{color:var(--blue)}.nav-links{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:.92rem;font-weight:800}.nav-links a:hover{color:white}.menu-btn{display:none;background:rgba(255,255,255,.06);color:var(--text);border:1px solid var(--border);border-radius:14px;padding:9px 12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:12px 18px;border:1px solid rgba(255,255,255,.18);background:rgba(16,29,52,.74);font-weight:900;cursor:pointer;transition:.22s;white-space:nowrap}.btn:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(37,99,255,.22);border-color:rgba(37,99,255,.72)}.btn-primary{background:linear-gradient(135deg,var(--blue),#0b9cff);border-color:rgba(37,99,255,.95);box-shadow:0 14px 46px rgba(37,99,255,.32)}.btn-yellow{background:linear-gradient(135deg,var(--yellow),#ffb701);color:#071225;border-color:rgba(255,209,26,.9)}.btn-large{padding:15px 24px;font-size:1rem}.hero{padding:86px 0 34px}.hero-layout{display:grid;grid-template-columns:1.04fr .96fr;gap:48px;align-items:center}.eyebrow,.label{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(37,99,255,.4);background:rgba(37,99,255,.13);border-radius:999px;padding:8px 12px;color:#dbeafe;font-family:"JetBrains Mono",monospace;font-size:.75rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.hero h1{font-family:Orbitron,Inter,sans-serif;font-size:clamp(2.85rem,6.2vw,5.65rem);line-height:.95;letter-spacing:-.06em;margin:24px 0 20px}.blue{color:var(--blue)}.yellow{color:var(--yellow)}.lead{font-size:1.16rem;color:#d8e5f7;max-width:700px}.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}.mini-proof{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;color:#d5deec;font-size:.9rem}.mini-proof span{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.1);padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.04)}.hero-card{border:1px solid rgba(37,99,255,.38);border-radius:34px;background:linear-gradient(180deg,rgba(18,37,68,.88),rgba(7,17,35,.9));box-shadow:var(--shadow);overflow:hidden;position:relative;min-height:540px}.hero-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 14%,rgba(37,99,255,.42),transparent 16rem),radial-gradient(circle at 14% 92%,rgba(255,209,26,.16),transparent 15rem);pointer-events:none}.panel-top{position:relative;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(140,178,255,.2);padding:17px 18px}.domain-pill{display:inline-flex;align-items:center;gap:7px;color:var(--yellow);font-weight:900;border:1px solid rgba(255,209,26,.62);padding:8px 12px;border-radius:999px;font-size:.86rem}.hero-visual{position:relative;padding:24px}.plan-card{position:relative;border:1px solid rgba(116,165,255,.34);border-radius:26px;background:linear-gradient(145deg,rgba(4,12,26,.76),rgba(17,42,78,.72));overflow:hidden;min-height:345px;padding:22px}.plan-card:before{content:"";position:absolute;inset:0;opacity:.52;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:28px 28px}.plan-content{position:relative}.status-line{display:flex;justify-content:space-between;gap:16px;align-items:center;color:#c9d9f7;font-family:"JetBrains Mono";font-size:.82rem}.progress{height:10px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden;margin:15px 0 22px}.progress i{display:block;width:62%;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--yellow))}.task-list{display:grid;gap:12px}.task{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:13px;background:rgba(255,255,255,.055)}.task .check{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;border:1px solid rgba(37,99,255,.7);color:var(--blue);font-weight:900}.task strong{display:block}.task small{display:block;color:var(--muted);font-size:.8rem}.tag{font-family:"JetBrains Mono";font-size:.72rem;border-radius:999px;padding:5px 8px;border:1px solid rgba(255,255,255,.15);color:#dbeafe}.tag.yellow{color:#081225;background:var(--yellow);border-color:var(--yellow)}.tag.blue{background:rgba(37,99,255,.22);border-color:rgba(37,99,255,.5)}.dashboard-row{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.dash-card{border:1px solid var(--border);border-radius:20px;background:rgba(255,255,255,.07);padding:15px}.dash-card strong{font-family:Orbitron;font-size:1.55rem;line-height:1}.dash-card span{display:block;color:var(--muted);font-size:.8rem;margin-top:5px}.marquee-wrap{margin-top:40px;overflow:hidden;border-block:1px solid rgba(140,178,255,.18);padding:14px 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}.marquee{display:flex;gap:12px;width:max-content;animation:scroll 32s linear infinite}.pill{border:1px solid rgba(255,255,255,.16);background:rgba(16,29,52,.7);border-radius:999px;padding:8px 13px;color:#dbeafe;font-family:"JetBrains Mono";font-size:.82rem}@keyframes scroll{to{transform:translateX(-50%)}}section{padding:92px 0;border-top:1px solid rgba(140,178,255,.14)}.section-head{max-width:790px;margin-bottom:38px}.section-head.center{text-align:center;margin-inline:auto}.section-head h2{font-family:Orbitron,Inter,sans-serif;font-size:clamp(2rem,3.7vw,3.35rem);line-height:1.08;letter-spacing:-.04em;margin:16px 0}.section-head p{color:#d5deec;font-size:1.05rem}.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:var(--radius);background:linear-gradient(180deg,rgba(20,39,70,.76),rgba(12,24,45,.72));padding:24px;box-shadow:0 1px 0 rgba(255,255,255,.04) inset;transition:.22s}.card:after{content:"";position:absolute;inset:auto -35% -55% auto;width:210px;height:210px;border-radius:999px;background:rgba(37,99,255,.12);filter:blur(28px)}.card:hover{transform:translateY(-5px);border-color:rgba(37,99,255,.62);box-shadow:0 26px 70px rgba(37,99,255,.16)}.icon{font-size:1.8rem}.card h3{font-size:1.15rem;margin:12px 0 8px}.card p{color:var(--muted);margin:0}.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}.workflow{grid-template-columns:repeat(4,1fr)}.phase:before{content:attr(data-step);position:absolute;right:20px;top:14px;font-family:Orbitron;font-size:2.9rem;color:rgba(37,99,255,.16);font-weight:900}.teams{grid-template-columns:repeat(3,1fr)}.light-section{background:radial-gradient(circle at 12% 8%,rgba(37,99,255,.12),transparent 18rem),linear-gradient(180deg,#eff6ff,#fff);color:#071225}.light-section .section-head p,.light-section .card p{color:#4b5c76}.light-section .label{background:rgba(37,99,255,.1);color:#0b56e6;border-color:rgba(37,99,255,.2)}.light-section .card{background:#fff;border-color:#d5e4ff;color:#071225;box-shadow:0 16px 46px rgba(37,99,255,.08)}.video-shell{max-width:980px;margin:0 auto;border:1px solid rgba(37,99,255,.36);border-radius:32px;background:linear-gradient(180deg,rgba(18,37,68,.82),rgba(7,17,35,.94));box-shadow:var(--shadow);overflow:hidden}.video-top{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 20px;border-bottom:1px solid rgba(140,178,255,.2);color:var(--muted);font-family:"JetBrains Mono";font-size:.78rem}.video-embed{padding:18px}.video-embed wistia-player{width:100%;border-radius:22px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.34)}wistia-player[media-id='589h0kdsr9']:not(:defined){background:center / contain no-repeat url('https://fast.wistia.com/embed/medias/589h0kdsr9/swatch');display:block;filter:blur(5px);padding-top:56.25%}.resource-grid{display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:18px;align-items:stretch}.resource-card.featured{background:linear-gradient(135deg,rgba(37,99,255,.22),rgba(255,209,26,.11)),linear-gradient(180deg,rgba(20,39,70,.88),rgba(12,24,45,.8));border-color:rgba(255,209,26,.48)}.resource-kicker{display:inline-flex;align-items:center;gap:7px;font-family:"JetBrains Mono";font-size:.72rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#dbeafe;background:rgba(37,99,255,.13);border:1px solid rgba(37,99,255,.3);border-radius:999px;padding:6px 10px}.file-meta{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}.file-meta span{font-family:"JetBrains Mono";font-size:.74rem;color:#dbeafe;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:5px 8px;background:rgba(255,255,255,.06)}.resource-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}.resource-card .btn{padding:10px 14px;font-size:.9rem}.resource-card:before{content:"PDF";position:absolute;right:18px;top:18px;font-family:Orbitron;font-size:.78rem;font-weight:900;color:rgba(255,209,26,.86);border:1px solid rgba(255,209,26,.35);border-radius:999px;padding:4px 8px}.signup-graphic{border-radius:32px;overflow:hidden;border:1px solid rgba(37,99,255,.32);box-shadow:var(--shadow);background:#071225}.signup-graphic img{width:100%;height:auto}.cta{padding:94px 0;text-align:center;background:radial-gradient(circle at 50% 0,rgba(37,99,255,.25),transparent 28rem)}.cta h2{font-family:Orbitron;font-size:clamp(2.2rem,4vw,3.7rem);line-height:1.06;margin:0 0 16px}.trust{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:26px}.trust span{border:1px solid var(--border);border-radius:999px;padding:9px 14px;color:#d5deec;background:rgba(16,29,52,.72)}footer{border-top:1px solid var(--border);padding:42px 0 24px;background:rgba(6,11,22,.88)}.footer-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:26px;align-items:center}.footer-links{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);justify-content:center}.footer-links a:hover{color:white}.footer-right{text-align:right;color:var(--muted)}.bottom{margin-top:26px;padding-top:22px;border-top:1px solid rgba(140,178,255,.16);color:#7f8ca3;font-size:.9rem;text-align:center}.fade-up{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.fade-up.in-view{opacity:1;transform:none}@media (max-width:980px){.hero-layout,.split,.resource-grid{grid-template-columns:1fr}.workflow{grid-template-columns:repeat(2,1fr)}.card-grid,.teams{grid-template-columns:1fr 1fr}.nav-links{position:absolute;left:20px;right:20px;top:78px;display:none;flex-direction:column;align-items:stretch;background:rgba(6,14,28,.98);border:1px solid var(--border);border-radius:20px;padding:18px;box-shadow:var(--shadow)}.nav-links.open{display:flex}.menu-btn{display:block}.nav-cta{display:none}.hero-card{min-height:auto}}@media (max-width:640px){.container{width:min(100% - 28px,var(--max))}.nav-inner{height:72px}.nav-links{top:72px;left:14px;right:14px}.hero{padding:50px 0 26px}.hero h1{font-size:2.58rem;line-height:1.03}.lead{font-size:1.02rem}.workflow,.card-grid,.teams,.dashboard-row{grid-template-columns:1fr}.cta-row{display:grid}.btn{width:100%}.footer-grid{grid-template-columns:1fr;text-align:center}.footer-right{text-align:center}section{padding:68px 0}.section-head h2{font-size:2.05rem}.brand{font-size:1.03rem}.mark{width:38px;height:38px}.domain-pill{display:none}.hero-card{border-radius:26px}.plan-card{min-height:auto}.task{grid-template-columns:auto 1fr}.task .tag{grid-column:2}.video-top{align-items:flex-start;flex-direction:column}}
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PitCrew | Mentor-Assist Build-Season Command Center for FRC & FTC</title>
+<meta name="description" content="PitCrew helps small and rebuilding FRC & FTC teams turn Kickoff Day into a real strategy, then carries that plan through build season with Commander's 17 specialist agents, MoSCoW planning, documentation, and competition-day tools." />
+<link rel="canonical" href="https://the-pitcrew.info/" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>" />
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="PitCrew" />
+<meta property="og:title" content="PitCrew | Mentor-Assist Build-Season Command Center for FRC & FTC" />
+<meta property="og:description" content="Turn Kickoff Day into a real strategy, then carry it through build season with Commander's 17 specialist agents, planning tools, and competition-day checklists." />
+<meta property="og:url" content="https://the-pitcrew.info/" />
+<!-- TODO: final OG image asset — placeholder path until the marketing image is exported -->
+<meta property="og:image" content="https://the-pitcrew.info/assets/img/og/pitcrew-og-home.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="PitCrew | Mentor-Assist Build-Season Command Center for FRC & FTC" />
+<meta name="twitter:description" content="Turn Kickoff Day into a real strategy, then carry it through build season with Commander's 17 specialist agents, planning tools, and competition-day checklists." />
+<meta name="twitter:image" content="https://the-pitcrew.info/assets/img/og/pitcrew-og-home.png" />
+
+<link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-<div class="page" id="top">
-  <div class="grid-bg"></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
-  <header class="nav"><div class="container nav-inner"><a class="brand" href="#top"><span class="mark"></span><span class="wordmark">Pit<span>Crew</span></span></a><nav class="nav-links" id="navLinks"><a href="#product">Product</a><a href="#demo">Demo</a><a href="#resources">Resources</a><a href="#workflow">Workflow</a><a href="#teams">For Teams</a><a href="#get-started">Get Started</a></nav><a class="btn btn-primary nav-cta" href="https://the-pitcrew.co" target="_blank" rel="noopener">Launch App →</a><button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button></div></header>
-  <main>
-    <section class="hero"><div class="container hero-layout"><div class="fade-up"><span class="eyebrow">Build · Plan · Win</span><h1>Your build season needs a <span class="blue">PitCrew.</span></h1><p class="lead">PitCrew is a mentor-assist build-season command center that helps small and rebuilding FRC & FTC teams turn kickoff decisions into organized plans, tasks, checklists, and documentation.</p><div class="cta-row"><a class="btn btn-primary btn-large" href="https://the-pitcrew.co" target="_blank" rel="noopener">Launch the App →</a><a class="btn btn-yellow btn-large" href="#resources">Signup Manual & Audio Guide ↓</a><a class="btn btn-large" href="#demo">Watch Demo</a></div><div class="mini-proof"><span>✅ Mentor-assist, not mentor replacement</span><span>🏁 Built for FRC & FTC</span><span>🔧 Designed for small teams</span></div></div><div class="hero-card fade-up"><div class="panel-top"><div class="brand"><span class="mark" style="width:34px;height:34px;border-radius:10px"></span><span class="wordmark">Pit<span>Crew</span></span></div><span class="domain-pill">🌐 the-pitcrew.co</span></div><div class="hero-visual"><div class="plan-card"><div class="plan-content"><div class="status-line"><strong>Today’s PitCrew Plan</strong><span>Team 1557 · Build Week 5</span></div><div class="progress"><i></i></div><div class="task-list"><div class="task"><span class="check">✓</span><div><strong>Kickoff notes organized</strong><small>Game facts, constraints, risks, and strategy choices captured.</small></div><span class="tag blue">Done</span></div><div class="task"><span class="check">→</span><div><strong>Strategy board ready</strong><small>Priorities sorted into must, should, could, and won’t build.</small></div><span class="tag yellow">Review</span></div><div class="task"><span class="check">+</span><div><strong>Build tasks created</strong><small>Prototype, CAD, fabrication, software, and notebook work assigned.</small></div><span class="tag blue">Next</span></div></div></div></div><div class="dashboard-row"><div class="dash-card"><strong>28</strong><span>Tasks organized</span></div><div class="dash-card"><strong>16</strong><span>Checklists active</span></div><div class="dash-card"><strong>3</strong><span>Mentor reviews</span></div></div></div></div></div><div class="marquee-wrap"><div class="marquee"><span class="pill">Kickoff Wizard</span><span class="pill">Team Constraints</span><span class="pill">Strategy Notes</span><span class="pill">MoSCoW Board</span><span class="pill">Prototype Plan</span><span class="pill">CAD Tasks</span><span class="pill">Build Schedule</span><span class="pill">Engineering Notebook</span><span class="pill">Kickoff Wizard</span><span class="pill">Team Constraints</span><span class="pill">Strategy Notes</span><span class="pill">MoSCoW Board</span><span class="pill">Prototype Plan</span><span class="pill">CAD Tasks</span><span class="pill">Build Schedule</span><span class="pill">Engineering Notebook</span></div></div></section>
-    <section id="product"><div class="container split"><div class="section-head fade-up"><span class="label">Why PitCrew</span><h2>Turn build-season chaos into a clear team system.</h2><p>Small teams do not need another generic chatbot. They need a repeatable way to move from discussion to decisions, from decisions to tasks, and from tasks to documented learning.</p></div><div class="card-grid"><article class="card fade-up"><div class="icon">🧭</div><h3>Plan with confidence</h3><p>Capture kickoff notes, team constraints, strategy options, and design tradeoffs in one place.</p></article><article class="card fade-up"><div class="icon">✅</div><h3>Stay organized</h3><p>Turn ideas into task lists, checklists, owners, priorities, and build-season milestones.</p></article><article class="card fade-up"><div class="icon">👥</div><h3>Mentor more, not less</h3><p>Provide guidance, feedback, and accountability without repeating the same explanation all season.</p></article><article class="card fade-up"><div class="icon">📘</div><h3>Document everything</h3><p>Keep notes, tests, CAD decisions, code decisions, and student reflections ready for review.</p></article><article class="card fade-up"><div class="icon">📊</div><h3>See what matters</h3><p>Get visibility into progress, risks, blockers, and where students need mentor support.</p></article><article class="card fade-up"><div class="icon">🤖</div><h3>Built for FRC & FTC</h3><p>Use workflows that match how robotics teams actually plan, build, test, and compete.</p></article></div></div></section>
-    <section class="light-section" id="workflow"><div class="container"><div class="section-head center fade-up"><span class="label">How It Works</span><h2>From kickoff notes to an organized build plan.</h2><p>PitCrew helps students and mentors ask better questions, make clearer decisions, and leave every meeting with useful next steps.</p></div><div class="card-grid workflow"><article class="card phase fade-up" data-step="01"><h3>Capture the game</h3><p>Paste notes, manual summaries, video takeaways, or team observations.</p></article><article class="card phase fade-up" data-step="02"><h3>Add constraints</h3><p>Tell PitCrew about your team size, tools, parts, budget, programming skill, and event timeline.</p></article><article class="card phase fade-up" data-step="03"><h3>Choose priorities</h3><p>Build a practical strategy board that separates must-build work from nice-to-have ideas.</p></article><article class="card phase fade-up" data-step="04"><h3>Execute the plan</h3><p>Create prototype tasks, CAD requests, checklists, schedules, and notebook entries.</p></article></div></div></section>
-    <section id="demo"><div class="container"><div class="section-head center fade-up"><span class="label">Demo Video</span><h2>See how PitCrew supports a build-season workflow.</h2><p>Use the demo as a quick walkthrough before inviting mentors, coaches, or students into the beta.</p></div><div class="video-shell fade-up"><div class="video-top"><span>WATCH DEMO</span><span>Mentor-assist workflow · Build-season planning · Team documentation</span></div><div class="video-embed"><wistia-player media-id="589h0kdsr9" aspect="1.7777777777777777"></wistia-player></div></div></div></section>
-    <section class="light-section" id="resources"><div class="container"><div class="section-head center fade-up"><span class="label">Resources</span><h2>Signup guide, playbook, and tutorials for beta teams.</h2><p>Start with the signup manual and video, then use the playbook and team tutorials to test PitCrew with FRC or FTC teams.</p></div><div class="resource-grid"><article class="card resource-card featured fade-up"><span class="resource-kicker">Start Here</span><h3>Signup Manual & Audio Guide</h3><p>Use this first when introducing a new coach or team to PitCrew. It explains how to sign up, launch the app, and begin the setup process.</p><div class="file-meta"><span>PDF</span><span>Video</span><span>Signup setup</span></div><div class="resource-actions"><a class="btn btn-yellow" href="docs/pitcrew-signup-manual.pdf" target="_blank" rel="noopener">Open Signup Manual →</a><a class="btn" href="videos/how_to_sign_up.mp3" target="_blank" rel="noopener">Watch Signup Audio Guide →</a></div></article><article class="card resource-card fade-up"><span class="resource-kicker">Playbook</span><h3>PitCrew Playbook</h3><p>The big-picture guide to what PitCrew is, how it supports mentors, and how teams should use it responsibly.</p><div class="file-meta"><span>PDF</span><span>Coach friendly</span><span>Beta overview</span></div><div class="resource-actions"><a class="btn btn-primary" href="docs/pitcrew-playbook.pdf" target="_blank" rel="noopener">Open Playbook →</a></div></article><article class="card resource-card fade-up"><span class="resource-kicker">FRC Tutorial</span><h3>FRC Team Tutorial</h3><p>A step-by-step guide for using PitCrew during FRC kickoff, strategy selection, prototype planning, CAD requests, and build tasks.</p><div class="file-meta"><span>PDF</span><span>FRC</span><span>Kickoff workflow</span></div><div class="resource-actions"><a class="btn btn-primary" href="docs/pitcrew-frc-tutorial.pdf" target="_blank" rel="noopener">Open FRC Tutorial →</a></div></article><article class="card resource-card fade-up"><span class="resource-kicker">FTC Tutorial</span><h3>FTC Team Tutorial</h3><p>A practical workflow for FTC teams to organize constraints, parts, mechanisms, programming needs, driver practice, and judging notes.</p><div class="file-meta"><span>PDF</span><span>FTC</span><span>Team setup</span></div><div class="resource-actions"><a class="btn btn-primary" href="docs/pitcrew-ftc-tutorial.pdf" target="_blank" rel="noopener">Open FTC Tutorial →</a></div></article></div></div></section>
-    <section id="teams"><div class="container"><div class="section-head center fade-up"><span class="label">For Teams</span><h2>Built for the teams that need structure most.</h2><p>PitCrew is designed for mentors and student leaders trying to keep a robotics season moving with limited time, people, and resources.</p></div><div class="card-grid teams"><article class="card fade-up"><div class="icon">🔧</div><h3>Small FRC Teams</h3><p>Give a 5–12 student team a repeatable process for strategy, prototype decisions, CAD handoffs, and documentation.</p></article><article class="card fade-up"><div class="icon">🤖</div><h3>FTC Teams</h3><p>Organize parts, tools, programming ability, driver practice, judging notes, and meet deadlines around the team’s real constraints.</p></article><article class="card fade-up"><div class="icon">🧭</div><h3>Rebuilding Programs</h3><p>Help new students and new mentors understand what to do next without turning AI into a replacement for learning.</p></article></div></div></section>
-    <section class="light-section"><div class="container"><div class="section-head center fade-up"><span class="label">Signup Intro Graphic</span><h2>A clear first impression for new teams.</h2><p>Use this visual as a welcome screen or presentation graphic when inviting a coach or team to begin the PitCrew setup process.</p></div><div class="signup-graphic fade-up"><img src="pitcrew_robotics_command_center.png" alt="Welcome to PitCrew signup introduction graphic for FRC and FTC teams" /></div></div></section>
-    <section class="cta" id="get-started"><div class="container fade-up"><span class="label">Get Started</span><h2>Ready to organize your build season?</h2><p class="lead" style="margin-inline:auto">Launch the app, open the signup manual, or share the signup video with another coach to start beta testing PitCrew.</p><div class="cta-row" style="justify-content:center"><a class="btn btn-primary btn-large" href="https://the-pitcrew.co" target="_blank" rel="noopener">Launch App →</a><a class="btn btn-yellow btn-large" href="#resources">Open Resources</a><a class="btn btn-large" href="https://kevin-bongiovanni.wistia.com/folders/h5xz9trgl1" target="_blank" rel="noopener">View Video Library</a></div><div class="trust"><span>🔒 No credit card required</span><span>🏁 Built for FRC & FTC</span><span>🧠 Mentor-assist, not mentor replacement</span></div></div></section>
-  </main>
-  <footer><div class="container footer-grid"><div class="brand"><span class="mark"></span><span class="wordmark">Pit<span>Crew</span></span></div><div class="footer-links"><a href="#product">Product</a><a href="#demo">Demo</a><a href="#resources">Resources</a><a href="#teams">For Teams</a><a href="https://the-pitcrew.co" target="_blank" rel="noopener">Launch App</a></div><div class="footer-right">Website: the-pitcrew.info<br/>App: the-pitcrew.co</div></div><div class="container bottom">© 2026 PitCrew · Not affiliated with FIRST Inspires. Use AI as a mentor-assist tool; students should make and understand the design decisions.</div></footer>
-</div>
-<script>
-  const nav=document.querySelector('.nav');const navLinks=document.getElementById('navLinks');const menuBtn=document.getElementById('menuBtn');
-  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>14));
-  menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
-  const io=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');io.unobserve(entry.target);}})},{threshold:.14});
-  document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
-</script>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><span class="mark"></span>Pit<span class="accent">Crew</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="kickoff-wizard.html">Kickoff Wizard</a>
+      <a href="commander.html">Commander</a>
+      <a href="for-teams.html">For Teams</a>
+      <a href="resources.html">Resources</a>
+      <a class="btn btn-primary" href="https://pitcrew2026.com" target="_blank" rel="noopener">Launch PitCrew →</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary nav-cta-desktop" href="https://pitcrew2026.com" target="_blank" rel="noopener">Launch PitCrew →</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow on-dark">From Kickoff to Competition</span>
+      <h1>Run a better <span style="color:#6f96f5">build season.</span></h1>
+      <p class="lead">PitCrew is a mentor-assist command center for small and rebuilding FRC &amp; FTC teams. Turn kickoff decisions and build-season work into organized plans, tasks, and documentation.</p>
+      <div class="hero-cta-row">
+        <a class="btn btn-primary btn-lg" href="https://pitcrew2026.com" target="_blank" rel="noopener">Launch PitCrew →</a>
+        <a class="btn btn-ghost-dark btn-lg" href="#kickoff-wizard">Try the Kickoff Wizard ↓</a>
+      </div>
+      <div class="hero-proof">
+        <span>🏁 Built for FRC &amp; FTC</span>
+        <span>🤖 Commander + 17 specialist agents</span>
+        <span>✅ Mentor-assist, not mentor replacement</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KICKOFF WIZARD SPOTLIGHT (primary acquisition feature) ============ -->
+  <section class="spotlight" id="kickoff-wizard">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="eyebrow amber">Kickoff Wizard</span>
+        <h2>What does your team do the moment Kickoff ends?</h2>
+        <p>Every FRC and FTC season starts the same way: a game reveal, a room full of ideas, and no structure to turn them into a plan. The Kickoff Wizard is PitCrew's answer — a guided session that takes your team from "we just watched the reveal video" to a scored strategy, a defined robot, and a build schedule, in one sitting.</p>
+      </div>
+
+      <div class="spotlight-grid">
+        <div class="fade-up">
+          <div class="shot">
+            <div class="shot-bar"><span></span><span></span><span></span></div>
+            <img src="assets/img/kickoff/decision-matrix.jpg" alt="PitCrew Decision Matrix screen scoring five strategy options across points potential, ranking point value, build difficulty, driver difficulty, and reliability risk, with Fast Low Cycler marked Highest Score and Selected" loading="lazy" width="1491" height="824" />
+          </div>
+          <p class="shot-caption">Decision Matrix — AI pre-scores every strategy your team is considering. Override anything you disagree with.</p>
+        </div>
+
+        <div class="spotlight-side">
+          <div class="fade-up">
+            <div class="shot">
+              <div class="shot-bar"><span></span><span></span><span></span></div>
+              <img src="assets/img/kickoff/match-strategies.jpg" alt="PitCrew Match Strategies screen showing five distinct AI-generated strategies with build-complexity badges and scoring rationale" loading="lazy" width="1445" height="850" />
+            </div>
+            <p class="shot-caption">Match Strategies — five distinct, game-specific options before you commit to one.</p>
+          </div>
+          <div class="fade-up">
+            <div class="shot">
+              <div class="shot-bar"><span></span><span></span><span></span></div>
+              <img src="assets/img/kickoff/build-schedule.jpg" alt="PitCrew Build Schedule screen showing a week-by-week task list generated automatically from the Kickoff Wizard session" loading="lazy" width="1428" height="840" />
+            </div>
+            <p class="shot-caption">Build Schedule — the payoff. A week-by-week plan, generated, not guessed at.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-cta-row" style="justify-content:center;margin-top:44px">
+        <a class="btn btn-amber btn-lg" href="https://pitcrew2026.com" target="_blank" rel="noopener">Start Your Kickoff Session →</a>
+        <a class="btn btn-ghost-dark btn-lg" href="kickoff-wizard.html">See the Full Kickoff Wizard →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS (bridge) ============ -->
+  <section>
+    <div class="container">
+      <div class="section-head center fade-up">
+        <span class="eyebrow">How It Works</span>
+        <h2>One session sets up your whole season.</h2>
+        <p>The Kickoff Wizard isn't a one-off form — it's the input that makes every other PitCrew tool useful from day one.</p>
+      </div>
+      <div class="grid-3">
+        <div class="feature-card fade-up"><div style="font-size:1.6rem">🧭</div><h3>Kickoff</h3><p>Game notes, team constraints, a scored strategy, and a defined robot — all captured in one guided session.</p></div>
+        <div class="feature-card fade-up"><div style="font-size:1.6rem">🗂️</div><h3>Plan</h3><p>Your Kickoff session feeds MoSCoW priorities, CAD requests, and a build schedule automatically — nothing re-typed.</p></div>
+        <div class="feature-card fade-up"><div style="font-size:1.6rem">🛠️</div><h3>Build &amp; Document</h3><p>Ask Commander anything as you build. Every session becomes a dated engineering notebook entry, automatically.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMMANDER + 17 AGENTS ============ -->
+  <section class="section-alt" id="commander">
+    <div class="container split">
+      <div class="fade-up">
+        <div class="shot">
+          <div class="shot-bar"><span></span><span></span><span></span></div>
+          <img src="assets/img/home/commander-answer.jpg" alt="Commander's completed answer synthesizing input from six specialist agents into a mechanism design, spec table, and next steps" loading="lazy" width="1491" height="824" />
+        </div>
+        <p class="shot-caption">Commander routes your question to the right specialists and returns one synthesized answer — cited, not vague.</p>
+      </div>
+      <div class="fade-up">
+        <span class="eyebrow">Commander</span>
+        <h2 style="font-size:clamp(1.7rem,3vw,2.3rem);margin:16px 0">Ask anything. Commander routes to the right agents automatically.</h2>
+        <p style="color:var(--ink-500);font-size:1.02rem;margin-bottom:18px">Behind Commander are 17 specialist agents — covering engineering, operations, outreach, awards, documentation, and student onboarding. You never need to know which one to ask.</p>
+        <div class="badge-list" style="margin-bottom:22px">
+          <span>Rulebook</span><span>CAD-Bot</span><span>Ada</span><span>Optic</span><span>Volt</span><span>Scout</span>
+          <span>OSHA</span><span>Ledger</span><span>Stress-Test</span><span>Grants</span><span>Megaphone</span>
+          <span>Legacy</span><span>Spark</span><span>Aesthetics</span><span>Scribe</span><span>Guide</span>
+        </div>
+        <a class="btn btn-primary" href="commander.html">Meet the Full Agent Roster →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEMO (placeholder — video not embedded yet) ============ -->
+  <section>
+    <div class="container">
+      <div class="section-head center fade-up">
+        <span class="eyebrow">Demo</span>
+        <h2>See a build-season workflow, start to finish.</h2>
+        <p>An updated walkthrough — including the Kickoff Wizard flow above — is in production.</p>
+      </div>
+      <div class="fade-up" style="max-width:920px;margin-inline:auto">
+        <div class="video-placeholder">
+          <div class="play-badge">▶</div>
+          <strong>Updated demo coming soon</strong>
+          <span>The current demo is being re-cut to show Commander's live response and the bulk invite flow. Check back shortly, or launch the app directly.</span>
+          <a class="btn btn-ghost-dark" href="https://pitcrew2026.com" target="_blank" rel="noopener">Launch PitCrew →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PLAN / BUILD / DOCUMENT ============ -->
+  <section class="section-alt" id="plan-build-document">
+    <div class="container">
+      <div class="section-head center fade-up">
+        <span class="eyebrow">Plan · Build · Document</span>
+        <h2>Everything your Kickoff session sets in motion.</h2>
+        <p>One shared board for priorities, a notebook that writes itself, and an invite flow built for a whole roster — not one student at a time.</p>
+      </div>
+      <div class="grid-3">
+        <div class="feature-card fade-up">
+          <div class="shot"><div class="shot-bar"><span></span><span></span><span></span></div><img src="assets/img/home/moscow-board.jpg" alt="Populated MoSCoW priority board with Must Have, Should Have, Could Have, and Won't Have columns" loading="lazy" width="1491" height="824" /></div>
+          <h3>MoSCoW Board</h3>
+          <p>One shared priority list — Must, Should, Could, Won't — generated straight from your Kickoff session.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="shot"><div class="shot-bar"><span></span><span></span><span></span></div><img src="assets/img/home/notebook-entry.jpg" alt="Auto-generated engineering notebook entry with a problem statement and research analysis section" loading="lazy" width="1491" height="824" /></div>
+          <h3>Notebook</h3>
+          <p>Every Commander session becomes a dated notebook entry automatically — documentation that survives to judging.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="shot"><div class="shot-bar"><span></span><span></span><span></span></div><img src="assets/img/home/bulk-invite.png" alt="Bulk and CSV invite panel with four names and email addresses pasted in, ready to send" loading="lazy" width="1277" height="642" /></div>
+          <h3>Bulk / CSV Invite</h3>
+          <p>Paste your whole roster at once, or upload a CSV. No more inviting students one at a time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPETITION / PIT TOOLS ============ -->
+  <section id="competition">
+    <div class="container">
+      <div class="section-head center fade-up">
+        <span class="eyebrow">Competition Day</span>
+        <h2>Ready for the pit, not just the shop.</h2>
+        <p>The same structure that got you through build season keeps working on event day.</p>
+      </div>
+      <div class="grid-2">
+        <div class="feature-card fade-up">
+          <div class="shot"><div class="shot-bar"><span></span><span></span><span></span></div><img src="assets/img/home/pit-checklist.jpg" alt="Pit Checklist screen with hardware and software readiness items, some checked off" loading="lazy" width="1491" height="824" /></div>
+          <h3>Pit Checklist</h3>
+          <p>A real competition-day readiness list across hardware, software, and safety — not a blank page the morning of.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="shot"><div class="shot-bar"><span></span><span></span><span></span></div><img src="assets/img/home/driver-practice.jpg" alt="Driver Practice screen showing a logged 30-minute session with a 4 out of 5 rating and coaching notes" loading="lazy" width="1100" height="520" /></div>
+          <h3>Driver Practice</h3>
+          <p>Log every practice session — focus area, duration, and a rating — so improvement is visible, not just felt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOR TEAMS TEASER ============ -->
+  <section class="section-alt">
+    <div class="container split">
+      <div class="fade-up">
+        <span class="eyebrow">For Coaches &amp; Mentors</span>
+        <h2 style="font-size:clamp(1.6rem,2.8vw,2.1rem);margin:14px 0">Stop explaining the same thing three times.</h2>
+        <p style="color:var(--ink-500)">Visibility across every subsystem, documentation that's ready for judging, and a process that survives roster turnover season to season.</p>
+      </div>
+      <div class="fade-up">
+        <span class="eyebrow amber">For Students</span>
+        <h2 style="font-size:clamp(1.6rem,2.8vw,2.1rem);margin:14px 0">Real ownership, real structure.</h2>
+        <p style="color:var(--ink-500)">The AI drafts, you decide. Ask Commander anything, and leave every session with a notebook entry that's actually worth reading.</p>
+      </div>
+    </div>
+    <div class="container" style="text-align:center;margin-top:34px">
+      <a class="btn btn-primary" href="for-teams.html">See the Full Coach &amp; Student Workflow →</a>
+    </div>
+  </section>
+
+  <!-- ============ GET STARTED ============ -->
+  <section class="cta-band" id="get-started">
+    <div class="container">
+      <span class="eyebrow on-dark" style="background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.3);color:#fff">Get Started</span>
+      <h2 style="margin-top:16px">Ready to organize your build season?</h2>
+      <p>Launch PitCrew and start your team's Kickoff session — no credit card, no lengthy setup.</p>
+      <div class="hero-cta-row">
+        <a class="btn btn-amber btn-lg" href="https://pitcrew2026.com" target="_blank" rel="noopener">Launch PitCrew →</a>
+        <a class="btn btn-ghost-dark btn-lg" href="kickoff-wizard.html">Learn About the Kickoff Wizard →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand"><span class="mark" style="width:32px;height:32px;border-radius:9px"></span>Pit<span style="color:#6f96f5">Crew</span></div>
+      <p style="font-size:.88rem;color:#8592b3;max-width:32ch">A mentor-assist build-season command center for small and rebuilding FRC &amp; FTC teams.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <a href="kickoff-wizard.html">Kickoff Wizard</a>
+      <a href="commander.html">Commander</a>
+      <a href="for-teams.html">For Teams</a>
+      <a href="resources.html">Resources</a>
+    </div>
+    <div class="footer-col">
+      <h4>App</h4>
+      <a href="https://pitcrew2026.com" target="_blank" rel="noopener">Launch PitCrew ↗</a>
+      <a href="https://the-pitcrew.info/">Website: the-pitcrew.info</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">© 2026 PitCrew · Not affiliated with FIRST Inspires. Use AI as a mentor-assist tool; students should make and understand the design decisions.</div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
