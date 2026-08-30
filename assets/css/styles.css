@@ -186,7 +186,7 @@ section { padding: 88px 0; }
 .shot-bar span:nth-child(1) { background: #ff6058; }
 .shot-bar span:nth-child(2) { background: #ffbd2e; }
 .shot-bar span:nth-child(3) { background: #28c93f; }
-.shot img { width: 100%; display: block; aspect-ratio: 16 / 10; object-fit: cover; object-position: left top; }
+.shot img { width: 100%; height: auto; display: block; aspect-ratio: 16 / 10; object-fit: contain; object-position: center; background: #050a12; }
 .shot.tall img { aspect-ratio: 4 / 3; }
 .shot-caption {
   font-family: var(--font-mono); font-size: .78rem; color: var(--ink-500);
