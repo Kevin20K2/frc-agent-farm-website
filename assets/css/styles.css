@@ -97,6 +97,7 @@ section { padding: 88px 0; }
 .btn-ghost-dark:hover { border-color: rgba(255,255,255,.5); }
 .btn-lg { padding: 16px 26px; font-size: 1.02rem; }
 .btn-block { width: 100%; }
+@media (max-width: 400px) { .btn { white-space: normal; text-align: center; } }
 
 /* ---------- Header / Nav ---------- */
 .site-header {
@@ -257,6 +258,19 @@ section { padding: 88px 0; }
 }
 .video-placeholder strong { font-family: var(--font-display); font-size: 1.05rem; color: #fff; }
 .video-placeholder span { font-size: .88rem; color: #93a0c4; max-width: 40ch; }
+
+/* ---------- Temporary audio walkthrough (video-placeholder stand-in) ---------- */
+.media-walkthrough {
+  background: var(--navy-900); border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--line-strong); box-shadow: var(--shadow-md);
+  padding: 34px 30px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;
+}
+.media-walkthrough h3 { font-family: var(--font-display); font-size: 1.1rem; color: #fff; margin: 2px 0 0; }
+.media-walkthrough p { font-size: .9rem; color: #93a0c4; max-width: 46ch; margin: 0; }
+.media-walkthrough audio { width: 100%; max-width: 480px; }
+.media-walkthrough audio:focus-visible { outline: 2px solid var(--amber-500); outline-offset: 3px; }
+.media-walkthrough .fallback-link { color: #cfe0ff; }
+@media (max-width: 480px) { .media-walkthrough { padding: 24px 18px; } }
 
 /* ---------- Answer callout (positioning statement) ---------- */
 .answer-box {
