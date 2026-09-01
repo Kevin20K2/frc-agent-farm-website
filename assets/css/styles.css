@@ -259,7 +259,7 @@ section { padding: 88px 0; }
 .video-placeholder strong { font-family: var(--font-display); font-size: 1.05rem; color: #fff; }
 .video-placeholder span { font-size: .88rem; color: #93a0c4; max-width: 40ch; }
 
-/* ---------- Temporary audio walkthrough (video-placeholder stand-in) ---------- */
+/* ---------- Demo media card (audio/video walkthrough) ---------- */
 .media-walkthrough {
   background: var(--navy-900); border-radius: var(--radius); overflow: hidden;
   border: 1px solid var(--line-strong); box-shadow: var(--shadow-md);
@@ -269,6 +269,8 @@ section { padding: 88px 0; }
 .media-walkthrough p { font-size: .9rem; color: #93a0c4; max-width: 46ch; margin: 0; }
 .media-walkthrough audio { width: 100%; max-width: 480px; }
 .media-walkthrough audio:focus-visible { outline: 2px solid var(--amber-500); outline-offset: 3px; }
+.media-walkthrough video { width: 100%; max-width: 860px; aspect-ratio: 16/9; border-radius: var(--radius-sm); background: #000; }
+.media-walkthrough video:focus-visible { outline: 2px solid var(--amber-500); outline-offset: 3px; }
 .media-walkthrough .fallback-link { color: #cfe0ff; }
 @media (max-width: 480px) { .media-walkthrough { padding: 24px 18px; } }
 
