@@ -54,7 +54,9 @@ h1 { max-width: 850px; margin: 0; color: var(--navy); font-size: clamp(2rem, 5vw
 .shared-panel { margin-top: 28px; }
 .safety { margin-top: 28px; padding: 22px; border: 2px solid #f4b7b7; border-radius: 16px; background: #fff5f5; }
 .safety h2 { margin-top: 0; color: #a72121; }
-.safety ol { margin-bottom: 0; }
+.safety ol { margin-bottom: 16px; }
+.safety .button { background: #a72121; }
+.safety .button:hover { background: #861919; }
 .pagination { display: flex; justify-content: space-between; gap: 18px; margin-top: 34px; }
 .pagination a { font-weight: 800; }
 footer { background: var(--navy); color: #cbd7e8; }
