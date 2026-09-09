@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FTC Java Autonomous Drive Forward Three Feet | The Robotic Pit Crew</title>
+  <meta name="description" content="Teach a first FTC Java autonomous program that uses motor encoders to drive a StarterBot forward 36 inches and stop, with a video, lesson plan, workbook, answer key, code, and safety sequence.">
+  <link rel="stylesheet" href="../assets/teleop.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://the-pitcrew.info/">THE ROBOTIC <span>PIT CREW</span></a>
+      <a class="top-link" href="https://the-pitcrew.info/resources/ftc-java/teleop-series/">FTC Java series</a>
+    </div>
+  </header>
+  <main>
+    <p class="eyebrow">Video 9 · First FTC autonomous lesson</p>
+    <h1>FTC Autonomous: Drive Forward Three Feet and Stop</h1>
+    <p class="lede">Turn a 36-inch movement into encoder counts, command both StarterBot drive motors to their targets, stop safely, and calibrate the result with real measurements.</p>
+    <div class="video-layout">
+      <div>
+        <div class="video-player">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/CrR3k94RJ5g"
+            title="Video 9 FTC Java Autonomous Drive Forward Three Feet and Stop"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <p class="video-actions"><a href="https://youtu.be/CrR3k94RJ5g" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></p>
+        <section class="safety">
+          <h2>POWERING ON for autonomous floor motion</h2>
+          <ol>
+            <li>Place the robot squarely at the start while the Driver Station shows DISABLED.</li>
+            <li>Remove hands, tools, cables, and measuring equipment from the lane.</li>
+            <li>Check the full 36-inch lane, side boundaries, and stopping buffer.</li>
+            <li>Call out “POWERING ON!”</li>
+            <li>Pause while everyone moves behind the safety boundary.</li>
+            <li>Visually confirm that the complete travel area is clear.</li>
+            <li>Select INIT and START only after the safety captain approves.</li>
+          </ol>
+          <p>After motion ends, press STOP and visually confirm DISABLED before anyone enters the lane, approaches the robot, or measures the result.</p>
+          <a class="button" href="../shared/FTC-POWERING-ON-Safety-Poster-11x17.pdf" download>Download the 11 x 17 safety poster</a>
+        </section>
+      </div>
+      <aside class="downloads">
+        <h2>Part 9 downloads</h2>
+        <p>Use the complete classroom lesson or select the files needed for your students.</p>
+        <ul class="download-list">
+          <li><a href="FTC-Autonomous-Part-9-Teacher-Lesson-Plan.pdf" download>Teacher lesson plan<span class="resource-type">6-page print-ready PDF</span></a></li>
+          <li><a href="FTC-Autonomous-Part-9-Focus-Guide.pdf" download>Teacher focus guide<span class="resource-type">3-page video pause and facilitation guide</span></a></li>
+          <li><a href="FTC-Autonomous-Part-9-Student-Workbook.pdf" download>Student workbook<span class="resource-type">5-page calculation and trial record</span></a></li>
+          <li><a href="FTC-Autonomous-Part-9-Teacher-Answer-Key.pdf" download>Teacher answer key<span class="resource-type">2-page calculations and expected explanations</span></a></li>
+          <li><a href="StarterBotDriveForwardThreeFeet.java" download>Autonomous Java program<span class="resource-type">Encoder target, RUN_TO_POSITION, timeout, and explicit stop</span></a></li>
+        </ul>
+      </aside>
+    </div>
+    <section class="shared-panel">
+      <h2>What students practice</h2>
+      <p>Students convert 537.7 encoder counts per motor-output revolution and a 96-millimeter wheel diameter into approximately 45.28 counts per inch. Multiplying by 36 produces a theoretical target of about 1,630 counts for each side.</p>
+      <p>That target is a starting calculation—not a promise of exact floor travel. Students run repeated controlled trials, measure from the same robot reference point, and use evidence to account for wheel slip, surface, wheel compression, drivetrain alignment, and gear reduction.</p>
+    </section>
+    <nav class="pagination" aria-label="Lesson navigation"><a href="../video-08/">← Video 8</a><a href="../">Series home →</a></nav>
+  </main>
+  <footer><div class="footer-inner">Independent FTC educational resources · Updated September 2026 · Not an official FIRST® publication.</div></footer>
+</body>
+</html>
