@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FTC Autonomous L-Shaped Route | The Robotic Pit Crew</title>
+  <meta name="description" content="Combine FTC motor encoders and the Control Hub IMU to drive 36 inches, turn right 90 degrees, drive 24 inches, and stop safely.">
+  <link rel="stylesheet" href="../assets/teleop.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://the-pitcrew.info/">THE ROBOTIC <span>PIT CREW</span></a>
+      <a class="top-link" href="https://the-pitcrew.info/resources/ftc-java/teleop-series/">FTC Java series</a>
+    </div>
+  </header>
+  <main>
+    <p class="eyebrow">Video 11 · Encoder and IMU capstone</p>
+    <h1>FTC Autonomous: Build an L-Shaped Route</h1>
+    <p class="lede">Combine distance and direction into one readable mission: drive 36 inches at zero degrees, turn right to −90 degrees, drive 24 inches while holding that heading, and stop.</p>
+    <div class="video-layout">
+      <div>
+        <div class="video-player">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/LdwmrXTMajU"
+            title="Video 11 FTC Autonomous Build an L-Shaped Route"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <p class="video-actions"><a href="https://youtu.be/LdwmrXTMajU" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></p>
+        <section class="safety">
+          <h2>POWERING ON for the complete route</h2>
+          <ol>
+            <li>Keep the Driver Station DISABLED while the team checks the start pose, motor directions, encoders, and IMU.</li>
+            <li>Mark the complete 36-inch leg, turning area, 24-inch leg, side boundaries, and stopping buffer.</li>
+            <li>Remove hands, tools, cables, measuring equipment, and loose parts from the entire route.</li>
+            <li>Call out “POWERING ON!”</li>
+            <li>Pause while everyone moves behind the safety boundary.</li>
+            <li>Visually sweep both legs and the turning area; nobody may touch or reach toward the robot.</li>
+            <li>Select INIT and START only after the safety captain approves the full route.</li>
+          </ol>
+          <p>If the robot leaves the marked route, moves unexpectedly, or approaches a person or obstacle, press STOP. Confirm DISABLED before anyone enters the course.</p>
+          <a class="button" href="../shared/FTC-POWERING-ON-Safety-Poster-11x17.pdf" download>Download the 11 x 17 safety poster</a>
+        </section>
+      </div>
+      <aside class="downloads">
+        <h2>Part 11 downloads</h2>
+        <p>Use the mission checkpoints and test one segment at a time before attempting the complete route.</p>
+        <ul class="download-list">
+          <li><a href="FTC-Autonomous-Part-11-Teacher-Lesson-Plan.pdf" download>Teacher lesson plan<span class="resource-type">8-page print-ready PDF with planned video pauses, route roles, trials, and assessment</span></a></li>
+          <li><a href="StarterBotLPathAutonomous.java" download>Autonomous Java program<span class="resource-type">Encoder distance, IMU turn, heading correction, segment timeouts, telemetry, and explicit stop</span></a></li>
+        </ul>
+      </aside>
+    </div>
+    <section class="shared-panel">
+      <h2>What students practice</h2>
+      <p>Students divide the autonomous mission into checkpoints: Leg 1, Turn, Leg 2, and Stop. They identify which sensor answers each question—encoders for distance and the IMU for direction—and predict what the telemetry should show at every checkpoint.</p>
+      <p>Teams test one segment at a time before running the whole L-shaped route. They record distance and heading errors separately so a turn problem is not mistakenly “fixed” by changing the encoder conversion.</p>
+    </section>
+    <nav class="pagination" aria-label="Lesson navigation"><a href="../video-10/">← Video 10</a><a href="../">Series home →</a></nav>
+  </main>
+  <footer><div class="footer-inner">Independent FTC educational resources · Updated September 2026 · Not an official FIRST® publication.</div></footer>
+</body>
+</html>
