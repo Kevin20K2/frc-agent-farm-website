@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FTC Autonomous IMU Turn Right 90 Degrees | The Robotic Pit Crew</title>
+  <meta name="description" content="Teach FTC students to configure the Control Hub IMU, read yaw, and turn a two-motor StarterBot right 90 degrees with tolerance and timeout safeguards.">
+  <link rel="stylesheet" href="../assets/teleop.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://the-pitcrew.info/">THE ROBOTIC <span>PIT CREW</span></a>
+      <a class="top-link" href="https://the-pitcrew.info/resources/ftc-java/teleop-series/">FTC Java series</a>
+    </div>
+  </header>
+  <main>
+    <p class="eyebrow">Video 10 · Built-in Control Hub IMU</p>
+    <h1>FTC Autonomous: Turn Right 90 Degrees with the IMU</h1>
+    <p class="lede">Give the robot a sense of direction: describe the Control Hub mounting, establish zero yaw, turn toward −90 degrees, and stop inside a safe tolerance.</p>
+    <div class="video-layout">
+      <div>
+        <div class="video-player">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/HdxwbRZCR7g"
+            title="Video 10 FTC Autonomous Turn Right 90 Degrees with the IMU"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <p class="video-actions"><a href="https://youtu.be/HdxwbRZCR7g" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></p>
+        <section class="safety">
+          <h2>POWERING ON for a measured turn</h2>
+          <ol>
+            <li>Keep the Driver Station DISABLED while the team checks the robot and IMU mounting.</li>
+            <li>Place the robot on the floor at the center of a taped test area with turning clearance on every side.</li>
+            <li>Remove hands, tools, cables, and loose parts from the robot and test area.</li>
+            <li>Call out “POWERING ON!”</li>
+            <li>Pause while everyone moves behind the safety boundary.</li>
+            <li>Visually confirm that nobody is touching or reaching toward the robot.</li>
+            <li>Select INIT and START only after the safety captain confirms the area is clear.</li>
+          </ol>
+          <p>After the turn, press STOP and confirm DISABLED before anyone crosses the boundary or approaches the robot.</p>
+          <a class="button" href="../shared/FTC-POWERING-ON-Safety-Poster-11x17.pdf" download>Download the 11 x 17 safety poster</a>
+        </section>
+      </div>
+      <aside class="downloads">
+        <h2>Part 10 downloads</h2>
+        <p>Use the teacher lesson plan and Java example alongside the video.</p>
+        <ul class="download-list">
+          <li><a href="FTC-Autonomous-Part-10-Teacher-Lesson-Plan.pdf" download>Teacher lesson plan<span class="resource-type">7-page print-ready PDF with planned video pauses and hands-on IMU investigation</span></a></li>
+          <li><a href="StarterBotImuTurn90.java" download>Autonomous Java program<span class="resource-type">Hub orientation, yaw, proportional turn, tolerance, timeout, and explicit stop</span></a></li>
+        </ul>
+      </aside>
+    </div>
+    <section class="shared-panel">
+      <h2>What students practice</h2>
+      <p>Students identify the robot’s agreed front, match the Control Hub logo and USB directions to the physical installation, observe yaw, and explain why the program resets yaw only after the robot is level, square, and still.</p>
+      <p>They then trace a feedback loop: measure the current heading, find the shortest signed error, choose turn power, and repeat until the error is within the two-degree tolerance or the timeout safely ends the attempt.</p>
+    </section>
+    <nav class="pagination" aria-label="Lesson navigation"><a href="../video-09/">← Video 9</a><a href="../video-11/">Video 11 →</a></nav>
+  </main>
+  <footer><div class="footer-inner">Independent FTC educational resources · Updated September 2026 · Not an official FIRST® publication.</div></footer>
+</body>
+</html>
