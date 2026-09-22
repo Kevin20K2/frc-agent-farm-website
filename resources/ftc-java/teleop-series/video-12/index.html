@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FTC Autonomous Repeatability Lesson | The Robotic Pit Crew</title>
+  <meta name="description" content="Part 12 FTC autonomous tutorial and teacher resources: run three L-path trials, measure repeatability, diagnose error, and retest one change safely.">
+  <link rel="stylesheet" href="../assets/teleop.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://the-pitcrew.info/">THE ROBOTIC <span>PIT CREW</span></a>
+      <a class="top-link" href="https://the-pitcrew.info/resources/ftc-java/teleop-series/">FTC Java series</a>
+    </div>
+  </header>
+  <main>
+    <p class="eyebrow">Video 12 · Measure, diagnose, and retest</p>
+    <h1>FTC Autonomous: Make the L Path Repeatable</h1>
+    <p class="lede">Part 11 taught the robot to drive 36 inches, turn right 90 degrees, then drive another 24 inches. This lesson asks whether it can finish at the same place again and again. Students collect evidence before changing the robot.</p>
+    <div class="video-layout">
+      <div>
+        <div class="video-player">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/uzouwHOrBfw"
+            title="Video 12 Can Your FTC Autonomous Robot Repeat the Same Path"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <p class="video-actions"><a href="https://youtu.be/uzouwHOrBfw" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></p>
+        <section class="safety">
+          <h2>POWERING ON for every trial</h2>
+          <ol>
+            <li>Place and square the robot while the Driver Station shows DISABLED. Finish any hands-on adjustment now.</li>
+            <li>Remove hands, tools, and tape measures. Check both legs, the turn sweep, side boundaries, and stopping buffer.</li>
+            <li>Look around and call out “POWERING ON!” loudly.</li>
+            <li>Pause while everyone moves behind the safety boundary; visually confirm the entire course is clear.</li>
+            <li>Only then authorize INIT and START. The operator stays ready to press STOP.</li>
+            <li>After the run, press STOP and visibly confirm DISABLED before anyone enters to measure or touch the robot.</li>
+          </ol>
+          <a class="button" href="../shared/FTC-POWERING-ON-Safety-Poster-11x17.pdf" download>Download the POWERING ON poster</a>
+        </section>
+      </div>
+      <aside class="downloads">
+        <h2>Part 12 downloads</h2>
+        <p>Print one record sheet per team. Use the same Java route from Part 11 so students can compare runs before and after a single change.</p>
+        <ul class="download-list">
+          <li><a href="FTC-Autonomous-Part-12-Teacher-Lesson-Plan.pdf" download>Teacher lesson plan<span class="resource-type">Five-page lesson, planned video pauses, roles, safety sequence, walkthrough, and technical notes</span></a></li>
+          <li><a href="FTC-Autonomous-Part-12-Student-Trial-Record.pdf" download>Student trial record<span class="resource-type">One-page worksheet for three baseline runs and three retests</span></a></li>
+          <li><a href="../video-11/StarterBotLPathAutonomous.java" download>Part 11 autonomous Java source<span class="resource-type">Same measured route; no new OpMode is needed for the baseline</span></a></li>
+        </ul>
+      </aside>
+    </div>
+    <section class="shared-panel" aria-labelledby="tutorial">
+      <h2 id="tutorial">Student tutorial: test the same route</h2>
+      <ol>
+        <li><strong>Agree on a reference point.</strong> Mark one point on the robot chassis and square it at the same taped start for every trial. With x forward and y right from that start, the target endpoint is <strong>(36, 24) inches</strong>; the target heading is <strong>−90°</strong> for this robot setup.</li>
+        <li><strong>Keep conditions comparable.</strong> Use the same floor, wheels, motor-power settings, and start orientation. Record the settings on the worksheet.</li>
+        <li><strong>Run three baseline trials.</strong> Complete the full POWERING ON sequence each time. Record where the chassis point stops, the final heading, and whether the OpMode completed or timed out. Do not omit a failed run.</li>
+        <li><strong>Measure only after DISABLED.</strong> Record actual forward distance x and rightward distance y. For each run, calculate endpoint error in inches as <code>sqrt((x − 36)² + (y − 24)²)</code>. A calculator is fine.</li>
+        <li><strong>Find the pattern.</strong> Similar misses suggest a consistent error; widely spread results suggest checking setup, loose hardware, traction, or sensor readings. Do not use the L-path endpoint alone to recalibrate wheel distance: a turn error can move that endpoint too.</li>
+        <li><strong>Make one justified change and retest.</strong> Predict what it should improve, then repeat the full safety sequence for at least two trials. Compare the average endpoint error and how closely the results group.</li>
+      </ol>
+      <p><strong>Ask your team:</strong> Did the robot get closer to the finish, become more consistent, both, or neither? What measurement supports your answer?</p>
+    </section>
+    <section class="shared-panel" aria-labelledby="next-skills">
+      <h2 id="next-skills">Build on this lesson</h2>
+      <p>Servos will add controlled mechanisms, sensors will add new measurements, and AprilTags will add camera observations. A repeatable autonomous route gives the team a baseline for judging whether those additions improve the robot.</p>
+    </section>
+    <nav class="pagination" aria-label="Lesson navigation"><a href="../video-11/">← Video 11</a><a href="../">Series home →</a></nav>
+  </main>
+  <footer><div class="footer-inner">Independent FTC educational resources · Updated September 2026 · Not an official FIRST® publication.</div></footer>
+</body>
+</html>
