@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lesson 3 Input and Decisions</title>
+    <meta
+      name="description"
+      content="Lesson 3 teaches terminal input, comparisons, if else decisions, and a robot readiness skill check."
+    />
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+    <link rel="stylesheet" href="../../assets/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../../index.html">
+        <span class="brand-mark" aria-hidden="true">C++</span>
+        <span>
+          <strong>The Robotic Pit Crew</strong>
+          <small>C++ Foundations</small>
+        </span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="../../index.html">Lessons</a>
+        <a href="../lesson-01/index.html">Lesson 1</a>
+        <a href="../lesson-02/index.html">Lesson 2</a>
+        <a href="index.html" aria-current="page">Lesson 3</a>
+        <a href="../lesson-04/index.html">Lesson 4</a>
+        <a href="../../downloads.html">Downloads</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="lesson-hero">
+        <div>
+          <p class="eyebrow">Lesson 3</p>
+          <h1>Input and Decisions</h1>
+          <p>
+            Students collect terminal input, compare values, and use if else logic to
+            build a robot readiness checker.
+          </p>
+        </div>
+        <img
+          src="../../assets/images/edit-compile-run-cycle-sample.png"
+          alt="Whiteboard-style C++ edit compile run cycle artwork"
+        />
+      </section>
+
+      <section class="content-grid">
+        <article class="panel video-panel">
+          <p class="eyebrow">Video</p>
+          <h2>Draft video ready</h2>
+          <p>
+            Review the Lesson 3 draft video for pacing, wording, and visual clarity before
+            publishing a final version.
+          </p>
+          <video class="lesson-video" controls preload="metadata">
+            <source src="../../videos/lesson-03-draft.mp4" type="video/mp4" />
+          </video>
+        </article>
+
+        <article class="panel">
+          <p class="eyebrow">Students practice</p>
+          <ul class="check-list">
+            <li>Read terminal input with cin.</li>
+            <li>Compare numbers with conditions such as batteryPercent &gt;= 50.</li>
+            <li>Use if and else to choose between two messages.</li>
+            <li>Test both a passing input and a failing input.</li>
+            <li>Build a robot readiness checker.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="page-shell narrow">
+        <h2>Starter code</h2>
+        <pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int batteryPercent = 0;
+
+    cout &lt;&lt; "Enter battery percent: ";
+    cin &gt;&gt; batteryPercent;
+
+    if (batteryPercent &gt;= 50) {
+        cout &lt;&lt; "Battery check passed." &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "Charge the battery before driving." &lt;&lt; endl;
+    }
+
+    return 0;
+}</code></pre>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <h2>Student downloads</h2>
+          <div class="download-list compact">
+            <a href="../../downloads/Lesson%203%20Student%20Workbook%20Input%20and%20Decisions.docx">Student workbook</a>
+            <a href="../../downloads/Lesson%203%20Exercises%20Input%20and%20Decisions.docx">Exercises</a>
+            <a href="../../downloads/lesson3_student_todo.cpp">Guided starter code</a>
+            <a href="../../downloads/lesson3_main.cpp">Starter code</a>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h2>Teacher review files</h2>
+          <div class="download-list compact">
+            <a href="../../downloads/Lesson%203%20Complete%20Teaching%20Packet.docx">Complete teaching packet</a>
+            <a href="../../downloads/Lesson%203%20Teacher%20Lesson%20Plan%20Input%20and%20Decisions.docx">Teacher lesson plan</a>
+            <a href="../../downloads/Lesson%203%20Instructor%20Answer%20Key%20Input%20and%20Decisions.docx">Instructor answer key</a>
+            <a href="../../downloads/Lesson%203%20Video%20Series%20Script%20and%20Artwork%20Brief.docx">Video script and artwork brief</a>
+          </div>
+        </article>
+      </section>
+
+      <nav class="lesson-nav" aria-label="Lesson navigation">
+        <a href="../lesson-02/index.html">Previous: Lesson 2</a>
+        <a href="../lesson-04/index.html">Next: Lesson 4</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>Lesson 3 is a desktop C++ lesson. No robot power or motion is part of this activity.</p>
+    </footer>
+  </body>
+</html>

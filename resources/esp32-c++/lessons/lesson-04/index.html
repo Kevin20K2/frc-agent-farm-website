@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lesson 4 Hello ESP32</title>
+    <meta
+      name="description"
+      content="Lesson 4 introduces ESP32 upload, setup, loop, Serial output, and a safe first board test."
+    />
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+    <link rel="stylesheet" href="../../assets/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../../index.html">
+        <span class="brand-mark" aria-hidden="true">C++</span>
+        <span>
+          <strong>The Robotic Pit Crew</strong>
+          <small>C++ Foundations</small>
+        </span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="../../index.html">Lessons</a>
+        <a href="../lesson-01/index.html">Lesson 1</a>
+        <a href="../lesson-02/index.html">Lesson 2</a>
+        <a href="../lesson-03/index.html">Lesson 3</a>
+        <a href="index.html" aria-current="page">Lesson 4</a>
+        <a href="../../downloads.html">Downloads</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="lesson-hero">
+        <div>
+          <p class="eyebrow">Lesson 4</p>
+          <h1>Hello ESP32</h1>
+          <p>
+            Students safely connect an ESP32, upload a first sketch, and use Serial
+            Monitor to see setup run once and loop repeat.
+          </p>
+        </div>
+        <img
+          src="../../assets/images/lesson1-title-card-sample.png"
+          alt="Whiteboard-style robotics C++ artwork with a laptop and controller"
+        />
+      </section>
+
+      <section class="content-grid">
+        <article class="panel video-panel">
+          <p class="eyebrow">Video</p>
+          <h2>Draft video ready</h2>
+          <p>
+            Review the Lesson 4 draft video for pacing, wording, and visual clarity before
+            publishing a final version.
+          </p>
+          <video class="lesson-video" controls preload="metadata">
+            <source src="../../videos/lesson-04-draft.mp4" type="video/mp4" />
+          </video>
+        </article>
+
+        <article class="panel">
+          <p class="eyebrow">Students practice</p>
+          <ul class="check-list">
+            <li>Connect an ESP32 by USB only.</li>
+            <li>Select board and port in Arduino IDE.</li>
+            <li>Upload a safe first sketch.</li>
+            <li>Open Serial Monitor at 115200 baud.</li>
+            <li>Explain setup runs once and loop repeats.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="page-shell narrow">
+        <h2>Starter sketch</h2>
+        <pre><code>void setup() {
+    Serial.begin(115200);
+    delay(1000);
+
+    Serial.println("Hello, ESP32!");
+    Serial.println("Setup runs once.");
+}
+
+void loop() {
+    Serial.println("Loop is running.");
+    delay(1000);
+}</code></pre>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <h2>Student downloads</h2>
+          <div class="download-list compact">
+            <a href="../../downloads/Lesson%204%20Student%20Workbook%20Hello%20ESP32.docx">Student workbook</a>
+            <a href="../../downloads/Lesson%204%20Exercises%20Hello%20ESP32.docx">Exercises</a>
+            <a href="../../downloads/lesson4_student_todo.ino">Guided starter sketch</a>
+            <a href="../../downloads/lesson4_hello_esp32.ino">Starter sketch</a>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h2>Teacher review files</h2>
+          <div class="download-list compact">
+            <a href="../../downloads/Lesson%204%20Complete%20Teaching%20Packet.docx">Complete teaching packet</a>
+            <a href="../../downloads/Lesson%204%20Teacher%20Lesson%20Plan%20Hello%20ESP32.docx">Teacher lesson plan</a>
+            <a href="../../downloads/Lesson%204%20Instructor%20Answer%20Key%20Hello%20ESP32.docx">Instructor answer key</a>
+            <a href="../../downloads/Lesson%204%20Video%20Series%20Script%20and%20Artwork%20Brief.docx">Video script and artwork brief</a>
+          </div>
+        </article>
+      </section>
+
+      <nav class="lesson-nav" aria-label="Lesson navigation">
+        <a href="../lesson-03/index.html">Previous: Lesson 3</a>
+        <span>Next: Lesson 5 planned</span>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>Lesson 4 uses USB power only. No motors, robot battery, sensors, or external wiring yet.</p>
+    </footer>
+  </body>
+</html>
