@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Learning | The Robotics Pit Crew</title>
+<meta name="description" content="Free, classroom-ready robotics programming courses from The Robotics Pit Crew, including FTC Java and beginner C++ with ESP32." />
+<link rel="canonical" href="https://the-pitcrew.info/learning/" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="PitCrew" />
+<meta property="og:title" content="Learning | The Robotics Pit Crew" />
+<meta property="og:description" content="Videos, teacher plans, student workbooks, code, and hands-on robotics lessons." />
+<meta property="og:url" content="https://the-pitcrew.info/learning/" />
+<meta property="og:image" content="https://the-pitcrew.info/assets/img/og/pitcrew-og-resources.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Learning | The Robotics Pit Crew" />
+<meta name="twitter:description" content="Classroom-ready FTC Java and C++/ESP32 robotics courses." />
+<meta name="twitter:image" content="https://the-pitcrew.info/assets/img/og/pitcrew-og-resources.png" />
+
+<link rel="stylesheet" href="../assets/css/styles.css" />
+<style>
+  .course-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+  .course-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:0 12px 32px rgba(11,25,50,.08);display:flex;flex-direction:column;gap:16px}
+  .course-card h2,.course-card p{margin:0}.course-icon{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;background:var(--navy-900);color:#fff;font-weight:800;font-size:1.05rem}
+  .course-meta{display:flex;flex-wrap:wrap;gap:8px}.course-meta span{font-size:.78rem;font-weight:700;padding:6px 10px;border-radius:999px;background:#eef3ff;color:var(--navy-800)}
+  .course-card .actions{margin-top:auto;padding-top:8px}.step-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.step-card{padding:24px;border:1px solid var(--line);border-radius:16px;background:#fff}.step-number{color:var(--amber-600);font-weight:900;font-size:1.8rem}.step-card h3{margin:8px 0}.step-card p{margin:0;color:var(--ink-500)}
+  .safety-callout{border-left:5px solid var(--amber-500);background:#fff7e5;border-radius:12px;padding:24px}.safety-callout h3{margin-top:0}.safety-callout p{margin-bottom:0}
+  @media(max-width:760px){.course-grid,.step-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html"><span class="mark"></span>Pit<span class="accent">Crew</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../kickoff-wizard.html">Kickoff Wizard</a>
+      <a href="../commander.html">Commander</a>
+      <a href="../for-teams.html">For Teams</a>
+      <a href="./" class="active">Learning</a>
+      <a href="../resources.html">Resources</a>
+      <a href="../get-started.html">Get Started</a>
+      <a class="btn btn-primary" href="https://www.the-pitcrew.app" target="_blank" rel="noopener">Launch PitCrew →</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary nav-cta-desktop" href="https://www.the-pitcrew.app" target="_blank" rel="noopener">Launch PitCrew →</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:64px">
+    <div class="container">
+      <span class="eyebrow on-dark">The Robotics Pit Crew Learning Lab</span>
+      <h1 style="max-width:18ch">Build skills. Then build robots.</h1>
+      <p class="lead">Free, classroom-ready courses that pair short visual lessons with teacher plans, student workbooks, working code, and hands-on practice.</p>
+    </div>
+  </section>
+
+  <section id="courses">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="eyebrow">Choose a learning path</span>
+        <h2>Start where your students are.</h2>
+        <p>Each course is organized so a teacher can open one lesson and find the video, discussion prompts, code, and printable materials together.</p>
+      </div>
+      <div class="course-grid">
+        <article class="course-card fade-up">
+          <div class="course-icon" aria-hidden="true">JAVA</div>
+          <div class="course-meta"><span>FTC</span><span>12 lessons</span><span>Beginner</span></div>
+          <h2>FTC Java</h2>
+          <p>Follow an FTC program from INIT through TeleOp, then apply motor encoders and the Control Hub IMU to build repeatable autonomous movement.</p>
+          <ul>
+            <li>Whiteboard video lessons</li>
+            <li>Teacher lesson plans and pause questions</li>
+            <li>Student workbooks and answer keys</li>
+            <li>Downloadable FTC Java examples</li>
+          </ul>
+          <div class="actions"><a class="btn btn-primary" href="ftc-java/teleop-series/">Open the FTC Java course →</a></div>
+        </article>
+
+        <article class="course-card fade-up">
+          <div class="course-icon" aria-hidden="true">C++</div>
+          <div class="course-meta"><span>ESP32</span><span>4 lessons</span><span>Beginner</span></div>
+          <h2>C++ and ESP32</h2>
+          <p>Begin with source code, variables, input, and decisions on a laptop, then move those ideas onto an ESP32 for the first supervised hardware upload.</p>
+          <ul>
+            <li>Teacher and student lesson packets</li>
+            <li>Starter and completed code</li>
+            <li>Laptop setup guide</li>
+            <li>First ESP32 setup-and-loop project</li>
+          </ul>
+          <div class="actions"><a class="btn btn-primary" href="esp32-cpp/">Open the C++ and ESP32 course →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" id="teaching-model">
+    <div class="container">
+      <div class="section-head fade-up">
+        <span class="eyebrow">Teaching model</span>
+        <h2>See it. Discuss it. Build it.</h2>
+      </div>
+      <div class="step-grid">
+        <article class="step-card fade-up"><div class="step-number">01</div><h3>Watch</h3><p>Use a short visual lesson to introduce one programming idea without overwhelming new students.</p></article>
+        <article class="step-card fade-up"><div class="step-number">02</div><h3>Pause and discuss</h3><p>Stop at the teacher prompts, ask students to predict what happens next, and check understanding.</p></article>
+        <article class="step-card fade-up"><div class="step-number">03</div><h3>Build and test</h3><p>Students complete the guided code or hands-on activity, then explain the result in their own words.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="safety-callout fade-up">
+        <h3>Robot lessons always include the POWERING ON sequence</h3>
+        <p>Secure the robot, confirm it is disabled, clear the work area, call “POWERING ON!”, wait for everyone to step away, visually confirm the area is clear, and only then enable the robot.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <span class="eyebrow on-dark" style="background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.3);color:#fff">More paths are coming</span>
+      <h2 style="margin-top:16px">Keep learning with the Pit Crew.</h2>
+      <p>Planned topics include FTC servos, sensors, AprilTag vision, Android Studio team workflows, and collaborative Git.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand"><span class="mark" style="width:32px;height:32px;border-radius:9px"></span>Pit<span style="color:#6f96f5">Crew</span></div>
+      <p style="font-size:.88rem;color:#8592b3;max-width:32ch">A mentor-assist build-season command center and practical learning library for robotics teams.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <a href="../kickoff-wizard.html">Kickoff Wizard</a>
+      <a href="../commander.html">Commander</a>
+      <a href="../for-teams.html">For Teams</a>
+      <a href="./">Learning</a>
+      <a href="../resources.html">Resources</a>
+      <a href="../get-started.html">Get Started</a>
+    </div>
+    <div class="footer-col">
+      <h4>App</h4>
+      <a href="https://www.the-pitcrew.app" target="_blank" rel="noopener">Launch PitCrew ↗</a>
+      <a href="https://the-pitcrew.info/">Website: the-pitcrew.info</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">© 2026 PitCrew · Not affiliated with FIRST Inspires. Use AI as a mentor-assist tool; students should make and understand the design decisions.</div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
