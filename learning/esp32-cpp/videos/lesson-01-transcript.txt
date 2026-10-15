@@ -1,15 +1,29 @@
 Lesson 1: What Is C++?
 
-Welcome to Level 1. Before we touch robot hardware, we need to learn how to give a computer clear instructions.
+Welcome to Level 1.
 
-C++ is a programming language. We write source code, then a compiler translates that code into a program the computer can run.
+Before we touch robot hardware, we need to learn how to give the computer clear instructions.
 
-Source code is what you type. The compiler checks it and translates it. The program is what you run.
+Our robot controller is still a computer. It does not guess what we mean.
 
-This is a complete C++ program. It looks strange at first, but today we only need to recognize the major parts.
+C++ is one way to write instructions clearly enough for the computer to follow.
 
-Most programming follows a cycle: edit, save, compile, run, and fix. That cycle matters more today than memorizing every detail.
+The code we type is called source code. A compiler checks that code and translates it. The result is a program the computer can actually run.
 
-Next, create the file, type the program, and run it yourself.
+This is a complete first C++ program. It may look strange today, but we only need to recognize the major parts.
 
-Review note: The timing for this transcript was adapted from the original production brief and should be confirmed against the final narration during the October 13 classroom review.
+The main function is where this program starts. The braces mark the group of instructions inside main.
+
+The cout line prints text to the terminal. The semicolon matters because many C++ statements must end with one.
+
+Most of today is about the routine: edit the file, save it, compile it, run it, then read the result or fix the error.
+
+To compile, we use G plus plus with the source file name and output program name. Then we run the program and look for the output.
+
+Once Hello World works, change the printed message. A small edit proves that you are controlling the program, not just copying it.
+
+Errors are normal feedback. If the compiler complains, check the nearby line. Missing quotes, braces, wrong folders, and semicolons are common first fixes.
+
+For the skill check, write a program that prints three lines. Include main, braces, three cout lines, a comment, and return zero.
+
+When you can explain the workflow and run your edited program, you're ready for Lesson 2: structure, variables, and clear code habits.
