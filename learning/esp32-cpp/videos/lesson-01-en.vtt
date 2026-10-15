@@ -1,0 +1,19 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:11.000
+Welcome to Level 1. Before we touch robot hardware, we need to learn how to give a computer clear instructions.
+
+00:00:11.000 --> 00:00:34.000
+C++ is a programming language. We write source code, then a compiler translates that code into a program the computer can run.
+
+00:00:34.000 --> 00:00:56.000
+Source code is what you type. The compiler checks it and translates it. The program is what you run.
+
+00:00:56.000 --> 00:01:31.000
+This is a complete C++ program. It looks strange at first, but today we only need to recognize the major parts.
+
+00:01:31.000 --> 00:01:54.000
+Most programming follows a cycle: edit, save, compile, run, and fix. That cycle matters more today than memorizing every detail.
+
+00:01:54.000 --> 00:02:05.000
+Next, create the file, type the program, and run it yourself.

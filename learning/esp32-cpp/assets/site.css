@@ -303,6 +303,15 @@ pre {
   text-decoration: none;
 }
 
+.download-list a span {
+  display: block;
+  margin-top: 0.28rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
 .download-list a:hover {
   border-color: var(--teal);
   box-shadow: 0 8px 24px rgba(8, 174, 181, 0.12);
@@ -321,6 +330,38 @@ pre {
   color: var(--muted);
   border-top: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.78);
+}
+
+.teacher-start,
+.editable-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.25rem;
+  background: rgba(231, 248, 251, 0.72);
+  border: 1px solid rgba(8, 174, 181, 0.35);
+  border-radius: 1rem;
+}
+
+.teacher-start h2,
+.editable-note h2 {
+  margin: 0 0 0.45rem;
+}
+
+.teacher-start p,
+.editable-note p,
+.transcript-link {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+a:focus-visible,
+button:focus-visible,
+video:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
 }
 
 @media (max-width: 780px) {
@@ -344,6 +385,12 @@ pre {
   .content-grid,
   .download-list {
     grid-template-columns: 1fr;
+  }
+
+  .teacher-start,
+  .editable-note {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .hero-copy h1,

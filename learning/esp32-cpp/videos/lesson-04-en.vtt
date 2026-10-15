@@ -1,0 +1,16 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:20.000
+Today your C++ code moves from the laptop to a real microcontroller.
+
+00:00:20.000 --> 00:00:45.000
+Keep this first hardware lesson safe: USB only, no motors, no extra wiring.
+
+00:00:45.000 --> 00:01:15.000
+setup runs once. loop repeats again and again.
+
+00:01:15.000 --> 00:01:50.000
+Choose the ESP32 board and the port connected to your board.
+
+00:01:50.000 --> 00:02:15.000
+The Serial Monitor lets the board talk back to you. Change the messages, upload again, and explain what runs once and what repeats.

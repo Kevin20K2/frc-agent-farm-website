@@ -1,0 +1,16 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:20.000
+Today the program will ask for information and choose what to do next.
+
+00:00:20.000 --> 00:00:45.000
+cin lets us read a value typed by the user.
+
+00:00:45.000 --> 00:01:15.000
+A condition is a true or false question.
+
+00:01:15.000 --> 00:01:50.000
+If the condition is true, one block runs. Otherwise, the else block runs.
+
+00:01:50.000 --> 00:02:20.000
+Good programmers test both outcomes, not just the one they expect. Now combine two inputs to decide whether the robot is ready for practice.

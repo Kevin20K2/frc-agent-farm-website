@@ -50,14 +50,16 @@
       <section class="content-grid">
         <article class="panel video-panel">
           <p class="eyebrow">Video</p>
-          <h2>Draft video ready</h2>
+          <h2>Lesson video</h2>
           <p>
-            Review the Lesson 4 draft video for pacing, wording, and visual clarity before
-            publishing a final version.
+            Move code onto a real microcontroller, then use setup, loop, upload, and Serial
+            Monitor to prove what the board is doing.
           </p>
           <video class="lesson-video" controls preload="metadata">
-            <source src="../../videos/lesson-04-draft.mp4" type="video/mp4" />
+            <source src="../../videos/lesson-04.mp4" type="video/mp4" />
+            <track kind="captions" src="../../videos/lesson-04-en.vtt" srclang="en" label="English" default />
           </video>
+          <p class="transcript-link"><a href="../../videos/lesson-04-transcript.txt">Read or download the transcript</a></p>
         </article>
 
         <article class="panel">
@@ -92,21 +94,16 @@ void loop() {
         <article class="panel">
           <h2>Student downloads</h2>
           <div class="download-list compact">
-            <a href="../../downloads/Lesson%204%20Student%20Workbook%20Hello%20ESP32.docx">Student workbook</a>
-            <a href="../../downloads/Lesson%204%20Exercises%20Hello%20ESP32.docx">Exercises</a>
+            <a href="../../downloads/Lesson%204%20Student%20Workbook%20Hello%20ESP32.pdf">Student workbook PDF</a>
+            <a href="../../downloads/Lesson%204%20Exercises%20Hello%20ESP32.pdf">Exercises PDF</a>
             <a href="../../downloads/lesson4_student_todo.ino">Guided starter sketch</a>
             <a href="../../downloads/lesson4_hello_esp32.ino">Starter sketch</a>
           </div>
         </article>
 
         <article class="panel">
-          <h2>Teacher review files</h2>
-          <div class="download-list compact">
-            <a href="../../downloads/Lesson%204%20Complete%20Teaching%20Packet.docx">Complete teaching packet</a>
-            <a href="../../downloads/Lesson%204%20Teacher%20Lesson%20Plan%20Hello%20ESP32.docx">Teacher lesson plan</a>
-            <a href="../../downloads/Lesson%204%20Instructor%20Answer%20Key%20Hello%20ESP32.docx">Instructor answer key</a>
-            <a href="../../downloads/Lesson%204%20Video%20Series%20Script%20and%20Artwork%20Brief.docx">Video script and artwork brief</a>
-          </div>
+          <h2>What to turn in</h2>
+          <ul class="check-list"><li>A successful ESP32 upload using USB power only.</li><li>Serial Monitor output at 115200 baud.</li><li>Changed setup and loop messages.</li><li>An explanation of what runs once and what repeats.</li></ul>
         </article>
       </section>
 
@@ -117,7 +114,7 @@ void loop() {
     </main>
 
     <footer class="site-footer">
-      <p>Lesson 4 uses USB power only. No motors, robot battery, sensors, or external wiring yet.</p>
+      <p>Lesson 4 uses USB power only. No motors, robot battery, sensors, or external wiring yet. <a href="../../teacher-resources.html">Teacher resources</a></p>
     </footer>
   </body>
 </html>
