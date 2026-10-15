@@ -1,0 +1,29 @@
+Lesson 1: What Is C++?
+
+Welcome to Level 1.
+
+Before we touch robot hardware, we need to learn how to give the computer clear instructions.
+
+Our robot controller is still a computer. It does not guess what we mean.
+
+C++ is one way to write instructions clearly enough for the computer to follow.
+
+The code we type is called source code. A compiler checks that code and translates it. The result is a program the computer can actually run.
+
+This is a complete first C++ program. It may look strange today, but we only need to recognize the major parts.
+
+The main function is where this program starts. The braces mark the group of instructions inside main.
+
+The cout line prints text to the terminal. The semicolon matters because many C++ statements must end with one.
+
+Most of today is about the routine: edit the file, save it, compile it, run it, then read the result or fix the error.
+
+To compile, we use G plus plus with the source file name and output program name. Then we run the program and look for the output.
+
+Once Hello World works, change the printed message. A small edit proves that you are controlling the program, not just copying it.
+
+Errors are normal feedback. If the compiler complains, check the nearby line. Missing quotes, braces, wrong folders, and semicolons are common first fixes.
+
+For the skill check, write a program that prints three lines. Include main, braces, three cout lines, a comment, and return zero.
+
+When you can explain the workflow and run your edited program, you're ready for Lesson 2: structure, variables, and clear code habits.

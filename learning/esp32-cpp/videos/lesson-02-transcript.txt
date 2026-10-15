@@ -1,0 +1,13 @@
+Lesson 2: Program Structure and Variables
+
+In Lesson 1, you ran a program. Now we make programs easier to read and easier to change.
+
+C++ programs have structure. Braces and indentation show which instructions belong together.
+
+A variable is a named value. Today our values describe a practice robot.
+
+A string stores text. An int stores a whole number. A double stores a decimal number.
+
+Clear output uses labels and values together so another person can read it.
+
+Your task is to build a robot profile with at least five labeled lines.
